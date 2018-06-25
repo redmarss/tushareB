@@ -376,12 +376,9 @@ def lhb_detail(code=None, date=None, retry_count=3, pause=0.001):
     df2 = None
     for _ in range(retry_count):
         time.sleep(pause)
-
         try:
             request = Request(rv.LHB_DETAIL % (date, code))
             text = urlopen(request, timeout=10).read()
-
-
             text = text.decode('GBK')
             html = lxml.html.parse(StringIO(text))
             res = html.xpath("//tbody")
@@ -389,11 +386,10 @@ def lhb_detail(code=None, date=None, retry_count=3, pause=0.001):
                 sarr = [etree.tostring(node).decode('utf-8') for node in res]
             else:
                 sarr = [etree.tostring(node) for node in res]
-            sarr.pop(0)
+            sarr.pop(0)                     #舍弃无用的第一个元素
             sarr = ''.join(sarr)
-            sarr = sarr.replace('tbody', 'table')
-            list_sarr = pd.read_html(sarr)
-
+            sarr = sarr.replace('tbody', 'table')   #规范格式
+            list_sarr = pd.read_html(sarr)          #由于有两个<table>,所以得到两个dataframe
 
             for i in range(len(list_sarr)):
                 df = list_sarr[i]
@@ -401,24 +397,34 @@ def lhb_detail(code=None, date=None, retry_count=3, pause=0.001):
                     flag='buy'
                 elif i==1:
                     flag='sell'
-                df[0] = ["%s_%s_%s_%s" % (code, date, flag ,i) for i in df[0]]
-                df[0]=df[0].map(lambda x: '%.24s'%x)
+                df[0] = ["%s_%s_%s_%s" % (code, date, flag ,j) for j in df[0]]
+                df[0]=df[0].map(lambda x: '%.24s'%x)                #规范长度
 
-
-
-
-                df[1] = df[1].map(lambda x: x.split("  "))
+                #处理机构这列
+                df[1] = df[1].map(lambda x: str(x).split("  "))
                 try:
                     ser1 = df[1].map(lambda x: x[0])
                     ser2 = df[1].map(lambda x: x[1])
                     ser3 = df[1].map(lambda x: x[2])
-                except:
-                    pass
-                del df[1]
+                except Exception as e:
+                    print(e)
+                del df[1]                   #删除原有机构这一列，分成3列新的
                 df.insert(1, 'company', ser1)
                 df.insert(2, 'count', ser2)
                 df.insert(3, 'per', ser3)
-                df.columns = rv.LHB_DETAIL_COLS
+
+                #判断是否格式正确
+                if len(df.columns)==9:
+                    df.columns = rv.LHB_DETAIL_COLS
+                elif len(df.columns)==8:        #若只有8列，说明没有买入卖出机构：
+                    #如何处理
+                    df.insert(5,'None',None)
+                    tempId=df[0][0]
+                    df.loc[0]=None
+                    df.loc[0,'company']='没有卖出机构'
+                    df.loc[0,0]=tempId[:-1]+"0"
+                    df.columns = rv.LHB_DETAIL_COLS
+
                 if i==0:
                     df1=df
                 elif i==1:

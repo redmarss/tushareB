@@ -28,4 +28,18 @@ def getLastData(strdate):
     dfLastTradeDay.index = listIndex
     return dfLastTradeDay
 
-
+#根据日期，获得龙虎榜上的股票代码，并根据股票代码返回每天前5的买卖机构,返回一个包含多个元组的list
+def getCompany(strdate):
+    #寻找上一个交易日
+    date=lastTddate(strdate)
+    #将该日期所有上榜的股票代码放入listCode中
+    df=getLastData(date)
+    listCode=[]
+    listLast=[]
+    for i in df['code']:
+        if i not in listCode:
+            listCode.append(str(i))
+    for j in listCode:
+        t=ts.lhb_detail(j,date)
+        listLast.append(t)
+    return listLast
