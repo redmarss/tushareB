@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding:utf8 -*-
 from tushare.util import dateu as du
 import datetime

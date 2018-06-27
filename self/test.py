@@ -1,15 +1,11 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-import self.longhu.mysqlConn as nm
+import self.longhu.getFromTushare as lh
 import tushare as ts
-
 code="600223"
 date="2018-06-15"
-t=ts.lhb_detail(code,date)
-for i in t:
-    print(i)
-
+print(type(ts.lhb_detail(code,date)))
 
 
 

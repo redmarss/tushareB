@@ -392,44 +392,100 @@ def lhb_detail(code=None, date=None, retry_count=3, pause=0.001):
             list_sarr = pd.read_html(sarr)          #由于有两个<table>,所以得到两个dataframe
 
             for i in range(len(list_sarr)):
-                df = list_sarr[i]
-                if i==0:
-                    flag='buy'
-                elif i==1:
-                    flag='sell'
-                df[0] = ["%s_%s_%s_%s" % (code, date, flag ,j) for j in df[0]]
-                df[0]=df[0].map(lambda x: '%.24s'%x)                #规范长度
+                df=list_sarr[i]
 
-                #处理机构这列
-                df[1] = df[1].map(lambda x: str(x).split("  "))
-                try:
-                    ser1 = df[1].map(lambda x: x[0])
+            #处理dataframe
+                # 删除卖出表的最后一行统计数据
+                if df.iloc[:,0].size==6:                #只保留5行数据
+                    df.drop([5],inplace=True,axis=0)
+
+                # 删除第一列无用的序号
+                df.drop([0],inplace=True,axis=1)
+
+                #处理机构那一列，拆分成三列
+                df[1]=df[1].map(lambda x: str(x).split("  "))   #引号里为两个空格
+                try:                                            #将原有列拆分成三个新的Series
+                    ser1=df[1].map(lambda x:x[0])
                     ser2 = df[1].map(lambda x: x[1])
                     ser3 = df[1].map(lambda x: x[2])
                 except Exception as e:
-                    print(e)
-                del df[1]                   #删除原有机构这一列，分成3列新的
-                df.insert(1, 'company', ser1)
-                df.insert(2, 'count', ser2)
-                df.insert(3, 'per', ser3)
+                    pass
+                df.drop(1,inplace=True,axis=1)                  #删除原有列
+                df.insert(0, 'broker', ser1)
+                df.insert(1, 'count', ser2)
+                df.insert(2, 'per', ser3)
 
-                #判断是否格式正确
-                if len(df.columns)==9:
+                #在最前面增加code与date两列
+                df.insert(0,'code',str(code))
+                df.insert(1,'date',str(date))
+
+                #在最后面加上买卖标记
+                if i==0:
+                    df.insert(len(df.columns),'buysellflag','buy')
+                elif i==1:
+                    df.insert(len(df.columns), 'buysellflag', 'sell')
+
+                #判断如果字段个数，若一致，则套用表头
+                if len(df.columns)==11:
                     df.columns = rv.LHB_DETAIL_COLS
-                elif len(df.columns)==8:        #若只有8列，说明没有买入卖出机构：
+                elif len(df.columns)==10:        #若只有10列，说明没有买入卖出机构：
                     #如何处理
                     df.insert(5,'None',None)
-                    tempId=df[0][0]
-                    df.loc[0]=None
-                    df.loc[0,'company']='没有卖出机构'
-                    df.loc[0,0]=tempId[:-1]+"0"
                     df.columns = rv.LHB_DETAIL_COLS
+                    df.loc[0]=[code,date,'没有买入或卖出机构','None','None','None','None','None','None','None','None']
 
+                #赋值
                 if i==0:
                     df1=df
                 elif i==1:
                     df2=df
-            return df1,df2
+            list1=[df1,df2]
+            return pd.concat(list1)
         except Exception as e:
             print(e)
+
+
+            #     df = list_sarr[i]
+            #     df.drop(1)
+            #     if i==0:
+            #         flag='buy'
+            #     elif i==1:
+            #         flag='sell'
+            #     df[0] = ["%s_%s_%s_%s" % (code, date, flag ,j) for j in df[0]]
+            #     df[0]=df[0].map(lambda x: '%.24s'%x)                #规范长度
+            #
+            #     #处理机构这列
+            #     df[1] = df[1].map(lambda x: str(x).split("  "))
+            #     try:
+            #         ser1 = df[1].map(lambda x: x[0])
+            #         ser2 = df[1].map(lambda x: x[1])
+            #         ser3 = df[1].map(lambda x: x[2])
+            #     except Exception as e:
+            #         print(e)
+            #     del df[1]                   #删除原有机构这一列，分成3列新的
+            #     df.insert(1, 'company', ser1)
+            #     df.insert(2, 'count', ser2)
+            #     df.insert(3, 'per', ser3)
+            #
+            #     #判断是否格式正确
+            #     if len(df.columns)==9:
+            #         df.columns = rv.LHB_DETAIL_COLS
+            #     elif len(df.columns)==8:        #若只有8列，说明没有买入卖出机构：
+            #         #如何处理
+            #         df.insert(5,'None',None)
+            #         tempId=df[0][0]
+            #         df.loc[0]=None
+            #         df.loc[0,'company']='没有卖出机构'
+            #         df.loc[0,0]=tempId[:-1]+"0"
+            #         df.columns = rv.LHB_DETAIL_COLS
+            #
+            #     if i==0:
+            #         df1=df
+            #     elif i==1:
+            #         df2=df
+            # list1=[df1,df2]
+            # df=pd.concat(list1)
+            #
+            # print(df.index)
+
 
