@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad50ef56-bdf3-42d5-83a8-b30e0c41bed7" name="Default" comment="lhb_detail">
-      <change afterPath="$PROJECT_DIR$/self/longhu/anaylzeData.py" afterDir="false" />
+    <list default="true" id="ad50ef56-bdf3-42d5-83a8-b30e0c41bed7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/self/longhu/dailyToSql.py" beforeDir="false" afterPath="$PROJECT_DIR$/self/longhu/dailyToSql.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/self/longhu/getFromTushare.py" beforeDir="false" afterPath="$PROJECT_DIR$/self/longhu/getFromTushare.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/self/longhu/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/self/longhu/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/self/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/self/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tushare/stock/billboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/tushare/stock/billboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tushare/stock/ref_vars.py" beforeDir="false" afterPath="$PROJECT_DIR$/tushare/stock/ref_vars.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/self/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+            <state relative-caret-position="119">
+              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
               <folding>
                 <element signature="e#44#83#0" expanded="true" />
               </folding>
@@ -46,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="billboard.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="billboard.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tushare/stock/billboard.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="441" column="26" selection-start-line="441" selection-start-column="26" selection-end-line="441" selection-end-column="26" />
+            <state relative-caret-position="449">
+              <caret line="442" column="35" lean-forward="true" selection-start-line="442" selection-start-column="35" selection-end-line="442" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -124,6 +117,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -134,8 +128,8 @@
         <option value="$PROJECT_DIR$/self/longhu/dailyToSql.py" />
         <option value="$PROJECT_DIR$/self/longhu/anaylzeData.py" />
         <option value="$PROJECT_DIR$/tushare/stock/ref_vars.py" />
-        <option value="$PROJECT_DIR$/self/test.py" />
         <option value="$PROJECT_DIR$/tushare/stock/billboard.py" />
+        <option value="$PROJECT_DIR$/self/test.py" />
       </list>
     </option>
   </component>
@@ -196,7 +190,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.python" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -286,19 +280,25 @@
       <option name="project" value="LOCAL" />
       <updated>1529832865374</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="lhb_detail">
+      <created>1530088033363</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1530088033363</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1294" height="1001" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25039124" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.11502347" side_tool="true" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.45852897" side_tool="true" visible="true" weight="0.32881355" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3299435" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.80203444" visible="true" weight="0.32881355" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.54147106" visible="true" weight="0.32881355" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -683,16 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/self/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding>
-            <element signature="e#44#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28271">
@@ -702,8 +692,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tushare/stock/billboard.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="441" column="26" selection-start-line="441" selection-start-column="26" selection-end-line="441" selection-end-column="26" />
+        <state relative-caret-position="449">
+          <caret line="442" column="35" lean-forward="true" selection-start-line="442" selection-start-column="35" selection-end-line="442" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/self/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding>
+            <element signature="e#44#83#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
