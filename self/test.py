@@ -5,7 +5,7 @@ import self.longhu.getFromTushare as lh
 import tushare as ts
 code="600223"
 date="2018-06-15"
-print(type(ts.lhb_detail(code,date)))
+print(ts.lhb_detail(code,date))
 
 
 
