@@ -1,21 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="ad50ef56-bdf3-42d5-83a8-b30e0c41bed7" name="Default" comment="">
+=======
+    <list default="true" id="170bc78c-25b3-4635-a1e4-4ed7ef5f5770" name="Default Changelist" comment="">
+>>>>>>> eb208aaea0d6934768a9dc4acae1076620d7e777
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+  <component name="FUSProjectUsageTrigger">
+    <session id="1727399384">
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="gitignore" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="9" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/self/test.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -34,20 +49,35 @@
             <state>
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+              <folding>
+                <element signature="e#40#54#0" expanded="true" />
+>>>>>>> eb208aaea0d6934768a9dc4acae1076620d7e777
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="billboard.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tushare/stock/billboard.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="449">
               <caret line="442" column="35" lean-forward="true" selection-start-line="442" selection-start-column="35" selection-end-line="442" selection-end-column="35" />
+=======
+            <state relative-caret-position="375">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+>>>>>>> eb208aaea0d6934768a9dc4acae1076620d7e777
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="pydevd.py" pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -67,28 +97,73 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
               <caret line="31" column="126" selection-start-line="31" selection-start-column="126" selection-end-line="31" selection-end-column="126" />
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/self/longhu/getFromTushare.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+              <folding>
+                <element signature="e#22#58#0" expanded="true" />
+              </folding>
+>>>>>>> eb208aaea0d6934768a9dc4acae1076620d7e777
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
         <entry file="file://H:/Anaconda/Lib/site-packages/pandas/core/base.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="578">
               <caret line="58" selection-start-line="58" selection-end-line="58" />
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tushare/util/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/self/longhu/dailyToSql.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/self/longhu/mysqlConn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="46" column="98" selection-start-line="46" selection-start-column="98" selection-end-line="46" selection-end-column="98" />
+              <folding>
+                <element signature="e#45#59#0" expanded="true" />
+              </folding>
+>>>>>>> eb208aaea0d6934768a9dc4acae1076620d7e777
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="frame.py" pinned="false" current-in-tab="false">
         <entry file="file://H:/Anaconda/Lib/site-packages/pandas/core/frame.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="8993">
               <caret line="623" selection-start-line="623" selection-end-line="623" />
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/self/longhu/main.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tushare/stock/shibor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1890">
+              <caret line="129" column="15" selection-start-line="129" selection-start-column="15" selection-end-line="129" selection-end-column="15" />
+>>>>>>> eb208aaea0d6934768a9dc4acae1076620d7e777
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://H:/Anaconda/Lib/site-packages/pandas/compat/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -103,8 +178,28 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="10" selection-start-line="10" selection-end-line="10" />
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tushare/stock/billboard.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+              <folding>
+                <element signature="e#582#1086#1" />
+                <element signature="e#1116#1218#0" />
+                <element signature="e#1238#1286#0" />
+                <element signature="e#1328#2764#0" />
+                <element signature="e#1371#2676#0" />
+                <element signature="e#2509#2631#0" />
+              </folding>
+>>>>>>> eb208aaea0d6934768a9dc4acae1076620d7e777
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tushare/stock/ref_vars.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -126,6 +221,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/self/longhu/main.py" />
         <option value="$PROJECT_DIR$/self/longhu/getFromTushare.py" />
         <option value="$PROJECT_DIR$/self/longhu/dailyToSql.py" />
@@ -142,6 +238,25 @@
     <option name="height" value="1001" />
   </component>
   <component name="ProjectLevelVcsManager">
+=======
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="4" />
+    <option name="width" value="1698" />
+    <option name="height" value="909" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+>>>>>>> eb208aaea0d6934768a9dc4acae1076620d7e777
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
@@ -149,7 +264,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -165,6 +279,7 @@
             <path>
               <item name="tushareB" type="b2602c69:ProjectViewProjectNode" />
               <item name="tushareB" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="self" type="462c0819:PsiDirectoryNode" />
               <item name="longhu" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -184,6 +299,20 @@
               <item name="tushareB" type="462c0819:PsiDirectoryNode" />
               <item name="tushare" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="tushare" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="tushareB" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+>>>>>>> eb208aaea0d6934768a9dc4acae1076620d7e777
             </path>
           </expand>
           <select />
@@ -191,10 +320,13 @@
       </pane>
     </panes>
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
+=======
+>>>>>>> eb208aaea0d6934768a9dc4acae1076620d7e777
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -204,6 +336,7 @@
         <RuleState>
           <option name="name" value="StatusDashboardGroupingRule" />
         </RuleState>
+<<<<<<< HEAD
       </list>
     </option>
   </component>
@@ -248,27 +381,23 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.test" />
+=======
+>>>>>>> eb208aaea0d6934768a9dc4acae1076620d7e777
       </list>
-    </recent_temporary>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ad50ef56-bdf3-42d5-83a8-b30e0c41bed7" name="Default" comment="" />
-      <created>1529742913973</created>
+      <changelist id="170bc78c-25b3-4635-a1e4-4ed7ef5f5770" name="Default Changelist" comment="" />
+      <created>1529310938982</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1529742913973</updated>
+      <updated>1529310938982</updated>
     </task>
-    <task id="LOCAL-00001" summary="完善了lhb_detail">
-      <created>1529745726695</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1529745726695</updated>
-    </task>
+<<<<<<< HEAD
     <task id="LOCAL-00002" summary="lhb_detail">
       <created>1529832260643</created>
       <option name="number" value="00002" />
@@ -320,11 +449,45 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
+=======
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-4" y="0" width="2568" height="1374" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2483248" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Project Explorer" order="3" weight="0.32991722" />
+      <window_info id="DB Browser" order="4" weight="0.32991722" />
+      <window_info id="Job Explorer" order="5" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960938" weight="0.19339243" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.21837229" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50039065" side_tool="true" weight="0.3298969" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Console" order="13" />
+      <window_info anchor="bottom" id="DB Execution Console" order="14" weight="0.26752618" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+>>>>>>> eb208aaea0d6934768a9dc4acae1076620d7e777
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+<<<<<<< HEAD
   <component name="VcsManagerConfiguration">
     <MESSAGE value="完善了lhb_detail" />
     <MESSAGE value="lhb_detail" />
@@ -450,11 +613,21 @@
           <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#44#83#0" expanded="true" />
+=======
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+          <folding>
+            <element signature="e#40#54#0" expanded="true" />
+>>>>>>> eb208aaea0d6934768a9dc4acae1076620d7e777
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/self/longhu/getFromTushare.py">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="21" selection-start-column="21" selection-end-column="21" />
@@ -512,10 +685,18 @@
           <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#44#83#0" expanded="true" />
+=======
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding>
+            <element signature="e#22#58#0" expanded="true" />
+>>>>>>> eb208aaea0d6934768a9dc4acae1076620d7e777
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/tushare/stock/billboard.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4131">
@@ -599,17 +780,35 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tushare/stock/billboard.py">
+=======
+    <entry file="file://$PROJECT_DIR$/tushare/util/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/self/longhu/dailyToSql.py">
+>>>>>>> eb208aaea0d6934768a9dc4acae1076620d7e777
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/self/longhu/mysqlConn.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state>
           <caret selection-end-column="21" />
+=======
+        <state relative-caret-position="660">
+          <caret line="46" column="98" selection-start-line="46" selection-start-column="98" selection-end-line="46" selection-end-column="98" />
+          <folding>
+            <element signature="e#45#59#0" expanded="true" />
+          </folding>
+>>>>>>> eb208aaea0d6934768a9dc4acae1076620d7e777
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/self/longhu/main.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tushare/stock/shibor.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state>
           <caret column="21" selection-start-column="21" selection-end-column="21" />
         </state>
@@ -629,11 +828,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="68" selection-start-line="8" selection-start-column="32" selection-end-line="9" selection-end-column="68" />
+=======
+        <state relative-caret-position="1890">
+          <caret line="129" column="15" selection-start-line="129" selection-start-column="15" selection-end-line="129" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/self/longhu/dailyToSql.py">
+    <entry file="file://$PROJECT_DIR$/tushare/stock/billboard.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+          <folding>
+            <element signature="e#582#1086#1" />
+            <element signature="e#1116#1218#0" />
+            <element signature="e#1238#1286#0" />
+            <element signature="e#1328#2764#0" />
+            <element signature="e#1371#2676#0" />
+            <element signature="e#2509#2631#0" />
+          </folding>
+>>>>>>> eb208aaea0d6934768a9dc4acae1076620d7e777
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tushare/stock/ref_vars.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state>
           <caret selection-end-line="1" selection-end-column="21" />
         </state>
@@ -714,6 +936,10 @@
           <folding>
             <element signature="e#44#83#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="375">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+>>>>>>> eb208aaea0d6934768a9dc4acae1076620d7e777
         </state>
       </provider>
     </entry>
