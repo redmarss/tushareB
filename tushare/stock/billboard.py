@@ -362,7 +362,8 @@ def lhb_detail(code=None, date=None, retry_count=3, pause=0.001):
     ------
     tuple(DataFrame1,DateFrame2)
     DataFrame
-        id：代码_日期_序号(1-5)
+        code:股票代码
+        date:日期
         broker：营业部名称
         count：上榜次数
         probability：买入后上涨概率
@@ -371,6 +372,7 @@ def lhb_detail(code=None, date=None, retry_count=3, pause=0.001):
         sell：卖出金额(万)
         sell_prop：卖出额占总成交比
         net：净额(万)
+        buysellflag:买入卖出标记
     """
     df1 = None
     df2 = None
@@ -443,49 +445,4 @@ def lhb_detail(code=None, date=None, retry_count=3, pause=0.001):
             return pd.concat(list1)
         except Exception as e:
             print(e)
-
-
-            #     df = list_sarr[i]
-            #     df.drop(1)
-            #     if i==0:
-            #         flag='buy'
-            #     elif i==1:
-            #         flag='sell'
-            #     df[0] = ["%s_%s_%s_%s" % (code, date, flag ,j) for j in df[0]]
-            #     df[0]=df[0].map(lambda x: '%.24s'%x)                #规范长度
-            #
-            #     #处理机构这列
-            #     df[1] = df[1].map(lambda x: str(x).split("  "))
-            #     try:
-            #         ser1 = df[1].map(lambda x: x[0])
-            #         ser2 = df[1].map(lambda x: x[1])
-            #         ser3 = df[1].map(lambda x: x[2])
-            #     except Exception as e:
-            #         print(e)
-            #     del df[1]                   #删除原有机构这一列，分成3列新的
-            #     df.insert(1, 'company', ser1)
-            #     df.insert(2, 'count', ser2)
-            #     df.insert(3, 'per', ser3)
-            #
-            #     #判断是否格式正确
-            #     if len(df.columns)==9:
-            #         df.columns = rv.LHB_DETAIL_COLS
-            #     elif len(df.columns)==8:        #若只有8列，说明没有买入卖出机构：
-            #         #如何处理
-            #         df.insert(5,'None',None)
-            #         tempId=df[0][0]
-            #         df.loc[0]=None
-            #         df.loc[0,'company']='没有卖出机构'
-            #         df.loc[0,0]=tempId[:-1]+"0"
-            #         df.columns = rv.LHB_DETAIL_COLS
-            #
-            #     if i==0:
-            #         df1=df
-            #     elif i==1:
-            #         df2=df
-            # list1=[df1,df2]
-            # df=pd.concat(list1)
-            #
-            # print(df.index)
-
 
