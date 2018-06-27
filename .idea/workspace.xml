@@ -119,6 +119,9 @@
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -287,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1530088033363</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="lhb_detail">
+      <created>1530088426691</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1530088426691</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -295,10 +305,10 @@
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25039124" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.45852897" side_tool="true" visible="true" weight="0.32881355" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.45852897" side_tool="true" visible="true" weight="0.32881355" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3299435" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.54147106" visible="true" weight="0.32881355" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.54147106" weight="0.32881355" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
