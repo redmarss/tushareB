@@ -17,6 +17,12 @@
 # idea
 .idea
 
+#vscode  and so on
+.vscode/*
+.cache/*
+__pycache__/*
+
+
 # Maven
 target/
 release.properties
