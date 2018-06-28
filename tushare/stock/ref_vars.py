@@ -29,7 +29,6 @@ LHB_GGTJ_COLS = ['code', 'name', 'count', 'bamount', 'samount', 'net', 'bcount',
 LHB_YYTJ_COLS = ['broker', 'count', 'bamount', 'bcount', 'samount', 'scount', 'top3']
 LHB_JGZZ_COLS = ['code', 'name', 'bamount', 'bcount', 'samount', 'scount', 'net']
 LHB_JGMX_COLS = ['code', 'name', 'date', 'bamount', 'samount', 'type']
-LHB_DETAIL_COLS=['code', 'name', 'broker', 'count', 'probability', 'buy', 'buy_prop', 'sell', 'sell_prop', 'net', 'buysellflag'] #机构数据表头
 TERMINATED_COLS = ['code', 'name', 'oDate', 'tDate']
 DP_COLS = ['report_date', 'quarter', 'code', 'name', 'plan']
 DP_163_COLS = ['code', 'name', 'year', 'plan', 'report_date']
@@ -53,3 +52,9 @@ HSGT_TEMP = ['DateTime', 'GGHSMoney', 'GGSSMoney', 'HSMoney', 'SSMoney', 'NorthM
 HSGT_COLS = ['date', 'ggt_ss', 'ggt_sz', 'hgt', 'sgt', 'north_money', 'south_money']
 HSGT_REF = '%sdata.%s/hsgt/%s'
 HSGT_DATA = '%sdcfm.%s/EM_MutiSvcExpandInterface/api/js/get?type=HSGTZJZS&token=70f12f2f4f091e459a279469fe49eca5'
+
+
+#self
+LHB_DETAIL_COLS=['code', 'name', 'broker', 'count', 'probability', 'buy', 'buy_prop', 'sell', 'sell_prop', 'net', 'buysellflag'] #龙虎榜机构数据表头
+#龙虎榜营业部上榜查询（需填入三个参数：开始日期、结束日期、每页数据）
+LHBYYBSBCS="http://datainterface3.eastmoney.com/EM_DataCenter_V3/Api//LHBYYBSBCS/GetLHBYYBSBCS?tkn=eastmoney&mkt=&dateNum=&startDateTime=%s&endDateTime=%s&sortRule=1&sortColumn=JmMoney&pageNum=1&pageSize=%s&cfg=lhbyybsbcs"

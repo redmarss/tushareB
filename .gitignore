@@ -72,3 +72,4 @@ package-lock.json
 # jooq
 src/gen/**
 src/generated/**
+.idea/workspace.xml
