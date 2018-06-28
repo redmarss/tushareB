@@ -7,7 +7,7 @@ code="000014"
 date="2018-06-15"
 df=ts.lhb_detail(code,date)
 
-print("")
+print("111")
 
 
 
