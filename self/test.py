@@ -2,12 +2,17 @@
 # -*- coding: utf-8 -*-
 
 import self.longhu.getFromTushare as lh
+import self.longhu.dailyToMvn as dtm
 import tushare as ts
-code="000014"
-date="2018-06-15"
-df=ts.lhb_detail(code,date)
 
-print("111")
+# startDate=ts
+# endDate="2018-07-04"
+# pagesize=2000000
+# dtm.brokerInfo(startDate,endDate,pagesize)
+
+
+
+
 
 
 
