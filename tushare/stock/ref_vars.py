@@ -57,4 +57,3 @@ HSGT_DATA = '%sdcfm.%s/EM_MutiSvcExpandInterface/api/js/get?type=HSGTZJZS&token=
 #self
 LHB_DETAIL_COLS=['code', 'name', 'broker', 'count', 'probability', 'buy', 'buy_prop', 'sell', 'sell_prop', 'net', 'buysellflag'] #龙虎榜机构数据表头
 #龙虎榜营业部上榜查询（需填入三个参数：开始日期、结束日期、每页数据）
-LHBYYBSBCS="http://datainterface3.eastmoney.com/EM_DataCenter_V3/Api//LHBYYBSBCS/GetLHBYYBSBCS?tkn=eastmoney&mkt=&dateNum=&startDateTime=%s&endDateTime=%s&sortRule=1&sortColumn=JmMoney&pageNum=1&pageSize=%s&cfg=lhbyybsbcs"

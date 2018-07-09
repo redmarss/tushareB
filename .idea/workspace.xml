@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e95df55-852d-4ebc-81d0-40b326e83d7d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/self/longhu/dailyToMvn.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/self/longhu/globalFunction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/self/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/self/longhu/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/self/longhu/dailyToSql.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/self/longhu/getFromTushare.py" beforeDir="false" afterPath="$PROJECT_DIR$/self/longhu/getFromTushare.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/self/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/self/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self/longhu/dailyToMvn.py" beforeDir="false" afterPath="$PROJECT_DIR$/self/longhu/dailyToMvn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self/longhu/globalFunction.py" beforeDir="false" afterPath="$PROJECT_DIR$/self/longhu/globalFunction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tushare/stock/ref_vars.py" beforeDir="false" afterPath="$PROJECT_DIR$/tushare/stock/ref_vars.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,83 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-start-column="2" selection-end-line="10" selection-end-column="44" />
-              <folding>
-                <element signature="e#44#83#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getFromTushare.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self/longhu/getFromTushare.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-              <folding>
-                <element signature="e#45#84#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="dailyToMvn.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/self/longhu/dailyToMvn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" selection-start-line="33" selection-end-line="33" selection-end-column="34" />
-              <folding>
-                <element signature="e#44#83#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dateu.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tushare/util/dateu.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="globalFunction.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self/longhu/globalFunction.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-              <folding>
-                <element signature="e#44#59#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="billboard.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tushare/stock/billboard.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" selection-start-line="19" selection-end-line="19" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self/longhu/main.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="mysqlConn.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self/longhu/mysqlConn.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="getBroker.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self/init/getBroker.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="357">
+              <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -102,8 +31,74 @@
       <file leaf-file-name="ref_vars.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tushare/stock/ref_vars.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="59" column="213" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="221" />
+            <state relative-caret-position="426">
+              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/self/longhu/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/self/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tushare/stock/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="request.py" pinned="false" current-in-tab="false">
+        <entry file="file://H:/Anaconda/Lib/urllib/request.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5559">
+              <caret line="352" selection-start-line="352" selection-end-line="352" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dateu.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tushare/util/dateu.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="87" selection-start-line="87" selection-end-line="98" selection-end-column="20" />
+              <folding>
+                <element signature="e#24#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="globalFunction.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/self/longhu/globalFunction.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
+              <folding>
+                <element signature="e#490#1254#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="anaylzeData.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/self/longhu/anaylzeData.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="billboard.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tushare/stock/billboard.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" selection-start-line="19" selection-end-line="19" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -118,6 +113,9 @@
     </option>
   </component>
   <component name="FindInProjectRecents">
+    <findStrings>
+      <find>is</find>
+    </findStrings>
     <dirStrings>
       <dir>H:\github\tushareB\tushare</dir>
     </dirStrings>
@@ -129,11 +127,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/self/init/getBroker.py" />
-        <option value="$PROJECT_DIR$/tushare/stock/ref_vars.py" />
         <option value="$PROJECT_DIR$/20180629.json" />
-        <option value="$PROJECT_DIR$/self/longhu/globalFunction.py" />
         <option value="$PROJECT_DIR$/self/longhu/getFromTushare.py" />
         <option value="$PROJECT_DIR$/self/test.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/self/__init__.py" />
+        <option value="$PROJECT_DIR$/self/longhu/globalFunction.py" />
+        <option value="$PROJECT_DIR$/tushare/stock/ref_vars.py" />
         <option value="$PROJECT_DIR$/self/longhu/dailyToMvn.py" />
       </list>
     </option>
@@ -168,18 +168,7 @@
               <item name="tushareB" type="b2602c69:ProjectViewProjectNode" />
               <item name="tushareB" type="462c0819:PsiDirectoryNode" />
               <item name="self" type="462c0819:PsiDirectoryNode" />
-              <item name="init" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tushareB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tushareB" type="462c0819:PsiDirectoryNode" />
-              <item name="self" type="462c0819:PsiDirectoryNode" />
               <item name="longhu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tushareB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tushareB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tushareB" type="b2602c69:ProjectViewProjectNode" />
@@ -206,6 +195,13 @@
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\github\tushareB" />
+      <recent name="H:\github\tushareB\self" />
+      <recent name="H:\github\tushareB\self\longhu" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -238,6 +234,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="globalFunction" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="tushareB" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/self/longhu" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/self/longhu/globalFunction.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tushareB" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -259,10 +273,12 @@
     <list>
       <item itemvalue="Python.test" />
       <item itemvalue="Python.dailyToMvn" />
+      <item itemvalue="Python.globalFunction" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.dailyToMvn" />
+        <item itemvalue="Python.globalFunction" />
         <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
@@ -301,7 +317,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39932886" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39932886" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -329,17 +345,35 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/self/longhu/dailyToMvn.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="text" language="Python" />
         <watch expression="type(text)" language="Python" />
+        <watch expression="str(response_data).split(&quot;:&quot;)" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>str(response_data).split(&quot;:&quot;)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>str(response_data).split(&quot;data:&quot;)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>type(text)</expression-string>
         <language-id>Python</language-id>
@@ -358,30 +392,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/self/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding>
-            <element signature="e#44#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/self/init/getBroker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tushare/stock/ref_vars.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
@@ -393,9 +403,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="57" />
-          <folding>
-            <element signature="e#44#83#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -403,9 +410,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding>
-            <element signature="e#44#83#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -434,9 +438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-          <folding>
-            <element signature="e#44#83#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -444,9 +445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding>
-            <element signature="e#44#83#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -475,9 +473,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-          <folding>
-            <element signature="e#44#83#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -485,9 +480,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-          <folding>
-            <element signature="e#44#83#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -618,19 +610,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tushare/stock/ref_vars.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" column="213" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="221" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/20180629.json" />
     <entry file="file://$PROJECT_DIR$/self/longhu/dailyToSql.py" />
     <entry file="file://$PROJECT_DIR$/self/longhu/main.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/self/longhu/mysqlConn.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/self/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" selection-start-line="7" selection-start-column="2" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/self/longhu/getFromTushare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py" />
+    <entry file="file://$PROJECT_DIR$/tushare/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tushare/stock/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tushare/stock/billboard.py">
@@ -640,46 +646,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/self/test.py">
+    <entry file="file://H:/Anaconda/Lib/urllib/request.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-start-column="2" selection-end-line="10" selection-end-column="44" />
-          <folding>
-            <element signature="e#44#83#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="5559">
+          <caret line="352" selection-start-line="352" selection-end-line="352" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/self/longhu/globalFunction.py">
+    <entry file="file://$PROJECT_DIR$/tushare/stock/cons.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-          <folding>
-            <element signature="e#44#59#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="191">
+          <caret line="101" column="15" selection-start-line="101" selection-start-column="15" selection-end-line="101" selection-end-column="72" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tushare/util/dateu.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/self/longhu/getFromTushare.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        <state relative-caret-position="241">
+          <caret line="87" selection-start-line="87" selection-end-line="98" selection-end-column="20" />
           <folding>
-            <element signature="e#45#84#0" expanded="true" />
+            <element signature="e#24#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/self/longhu/anaylzeData.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/self/longhu/globalFunction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="e#490#1254#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tushare/stock/ref_vars.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/self/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/self/longhu/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/self/longhu/dailyToMvn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" selection-start-line="33" selection-end-line="33" selection-end-column="34" />
-          <folding>
-            <element signature="e#44#83#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="357">
+          <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
         </state>
       </provider>
     </entry>
