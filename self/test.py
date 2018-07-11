@@ -1,14 +1,11 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-import self.longhu.getFromTushare as lh
-import self.longhu.dailyToMvn as dtm
-import tushare as ts
 
-# startDate=ts
-# endDate="2018-07-04"
-# pagesize=2000000
-# dtm.brokerInfo(startDate,endDate,pagesize)
+import self.longhu.anaylzeData as ad
+import tushare
+# ad.anaylzeLonghu('80065939','2017-05-02')
+
 
 
 

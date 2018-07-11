@@ -18,6 +18,7 @@ except ImportError:
 def brokerInfo(statrDate=None, endDate=None, pagesize=2000):
     urlPost="http://localhost:8080/broker/purchaseSummary"
     LHBYYBSBCS=LHBYYBSBCS="http://datainterface3.eastmoney.com/EM_DataCenter_V3/Api//LHBYYBSBCS/GetLHBYYBSBCS?tkn=eastmoney&mkt=&dateNum=&startDateTime=%s&endDateTime=%s&sortRule=1&sortColumn=JmMoney&pageNum=1&pageSize=%s&cfg=lhbyybsbcs"
+    print(LHBYYBSBCS % (statrDate, endDate, pagesize))
     try:
         request=Request(LHBYYBSBCS%(statrDate,endDate,pagesize))
         text=urlopen(request,timeout=10).read()                     #type is byte

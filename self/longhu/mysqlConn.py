@@ -7,7 +7,7 @@ from sqlalchemy import create_engine
 # 数据库连接参数
 config = {
     'host': "127.0.0.1",
-    'database': "longhu",
+    'database': "tushare",
     'user': "root",
     'password': "123456",
     'port': 3306,
@@ -21,13 +21,11 @@ def selectSqlAll(sql):
         with dbconn.cursor() as cursor:
             cursor.execute(sql)
             result = cursor.fetchall()
-            print(config['user'])
         return result
         dbconn.commit()
     except:
         print("sql语句有误，请重新输入")
-    finally:
-        dbconn.close()
+
 
 # 增删改均可用此函数，先确保sql语句正确(要设定mysql:SET SQL_SAFE_UPDATES = 0)
 def OperateSql(sql):
@@ -52,3 +50,9 @@ def DataframeToSql(df,table):
         print("成功")
     except:
         print("重复")
+
+def CloseConn():
+    try:
+        dbconn.close()
+    except:
+        pass
