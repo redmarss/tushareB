@@ -25,8 +25,8 @@ class StockPrice(object):
     def volumne(self):
         return self.tuple[6]
 
-#score类
-class Score(object):
+#机构分数类
+class BrokerScore(object):
     def __init__(self,list):
         if len(list)==13:
             self.list=list
@@ -124,3 +124,15 @@ class Score(object):
     @score.setter
     def score(self):
         pass
+
+#打分类
+class Score(object):
+    def __init__(self,list):
+        flag=0
+        for i in range(len(list)):
+            flag+=1
+        if flag==len(list):
+            self.list=list
+        else:
+            print("error")
+
