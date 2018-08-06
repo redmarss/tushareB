@@ -3,9 +3,26 @@
 
 
 import self.longhu.anaylzeData as ad
-import tushare
-# ad.anaylzeLonghu('80065939','2017-05-02')
-
+import self.longhu.RunOnce as ro
+import self.longhu.globalFunction as gl
+import self.longhu.getFromTushare as gt
+import tushare as ts
+from tushare.stock import cons as ct
+import json
+#print(ad.anaylzeLonghu('80065939','2017-05-02'))
+# ad.getPrice("600000","2018-06-09")
+# df=ad.getPrice('600000','2018-06-01',5)
+# print(df)
+# js=df.to_json(orient='records')
+#
+# print(js)
+# startdate="2017-01-05"
+# while startdate<"2017-12-31":
+#     startdate=str(gl.diffDay(startdate,1))
+#     ad.getData(startdate)
+#ad.getData("2018-07-06")
+# ad.getAllBroker()
+ad.ScoreBroker('80141202',"600000","2017-05-05")
 
 
 

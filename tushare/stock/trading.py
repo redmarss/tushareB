@@ -637,6 +637,8 @@ def get_k_data(code=None, start='', end='',
                   复权类型，qfq-前复权 hfq-后复权 None-不复权，默认为qfq
       ktype：string
                   数据类型，D=日k线 W=周 M=月 5=5分钟 15=15分钟 30=30分钟 60=60分钟，默认为D
+      index: bool
+                  是否为指数，默认为False,设定为True时认为code为指数代码
       retry_count : int, 默认 3
                  如遇网络等问题重复执行的次数 
       pause : int, 默认 0
