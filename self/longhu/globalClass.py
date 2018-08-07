@@ -1,10 +1,16 @@
 #!/usr/bin/env python
 # -*- coding:utf8 -*-
 
-#stock类
+#stockPrice类
+#输入一个长度为8的元组作为参数，只读。参数分别是index,stock_code,tsdate,open,close,average
+#输入参数从gl.getStockPrice()取【参数为code,date,day(某个股票某天后几天内的交易数据)，返回元组，再切片】
 class StockPrice(object):
     def __init__(self,tuple):
-        self.tuple=tuple
+        if len(tuple==8):
+            self.tuple=tuple
+        else:
+            print("类参数输入错误")
+            return
 
     @property
     def stock_code(self):
@@ -19,13 +25,18 @@ class StockPrice(object):
     def close(self):
         return self.tuple[4]
     @property
-    def average(self):
+    def high(self):
         return self.tuple[5]
     @property
-    def volumne(self):
+    def low(self):
         return self.tuple[6]
+    @property
+    def volumne(self):
+        return self.tuple[7]
 
 #机构分数类
+#输入一个长度为13的LIST作为参数，可读可写。参数为【index,broker_code,broker_name,b_count,s_count,avr_2day,avr_3day,avr_5day,avr_7day,avr_10day,2daylimit_count,maxlimit_count,score】
+#输入参数从数据库broker_score中取
 class BrokerScore(object):
     def __init__(self,list):
         if len(list)==13:
@@ -126,11 +137,26 @@ class BrokerScore(object):
         pass
 
 #打分类
+#输入一个长度不限的列表作为参数。
 class Score(object):
+    __broker_code=None
+    __b_count=None
+    __s_count=None
+    __avr_2day=None
+    __avr_3day=None
+    __avr_5day=None
+    __avr_7day=None
+    __avr_10day=None
+    __2day_limit_count=None
+    __max_limit_count=None
+    __score=None
+
     def __init__(self,list):
+        #判断输入参数中每个元素必须是stockPrice类的对象
         flag=0
         for i in range(len(list)):
-            flag+=1
+            if isinstance(list[i],StockPrice):
+                flag+=1
         if flag==len(list):
             self.list=list
         else:
