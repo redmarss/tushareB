@@ -13,7 +13,8 @@ except ImportError:
 
 
 #判断是否涨停板
-def IsLimit(open,close):
+def IsLimit(code,open,close):
+
     if close>=round(1.1*open):
         return True
     else:
@@ -112,36 +113,35 @@ def postData(textByte,urlPost,code=None):
 
 #获取所有股票代码
 def getAllStockCode():
-    stock_CodeUrl="http://quote.eastmoney.com/stocklist.html"
-    allCodeList=[]
-    csvFileSH=open(r"H:\github\tushareB\self\longhu\SHALIST.csv","r")
-    readerSH=csv.reader(csvFileSH)
-    for item in readerSH:
-        if readerSH.line_num==1:
-            continue
-        allCodeList.append(item[0])
-
-    csvFileSZ=open(r"H:\github\tushareB\self\longhu\SZALIST.csv","r")
-    readerSZ=csv.reader(csvFileSZ)
-    for item in readerSZ:
-        if readerSZ.line_num==1:
-            continue
-        allCodeList.append(item[0])
-    return allCodeList
-    # try:
-    #     request=Request(stock_CodeUrl)
-    #     html=urlopen(request,timeout=10).read()
-    #     html=html.decode('gbk')
-    #     s=r'<li><a target="_blank" href="http://quote.eastmoney.com/\S\S(.*?).html">'
-    #     pat=re.compile(s)
-    #     code=pat.findall(html)
-    # except Exception as e:
-    #     print(e)
-    #     return None
-    # for item in code:
-    #     if item[0] == '6' or item[0] == '3' or item[0] == '0':
+    #stock_CodeUrl="http://quote.eastmoney.com/stocklist.html"
+    # allCodeList=[]
+    # csvFileSH=open(r"H:\github\tushareB\self\longhu\SHALIST.csv","r")
+    # readerSH=csv.reader(csvFileSH)
+    # for item in readerSH:
+    #     if readerSH.line_num==1:
+    #         continue
+    #     allCodeList.append(item[0])
     #
-    #         allCodeList.append(item)
+    # csvFileSZ=open(r"H:\github\tushareB\self\longhu\SZALIST.csv","r")
+    # readerSZ=csv.reader(csvFileSZ)
+    # for item in readerSZ:
+    #     if readerSZ.line_num==1:
+    #         continue
+    #     allCodeList.append(item[0])
+    # return allCodeList
+    dict_stock={}
+    csvFileSH=r"H:\github\tushareB\self\longhu\SHALIST.csv"
+    csvFileSZ=r"H:\github\tushareB\self\longhu\SZALIST.csv"
+    listFile=[csvFileSH,csvFileSZ]
+    for csv_file in listFile:
+        with open(csv_file) as f:
+            reader=csv.reader(f,delimiter=',')
+
+            for row in reader:
+                if reader.line_num == 1:
+                    continue
+                dict_stock[row[0]]=row[1]
+    return dict_stock
 
 #获取某股票N个交易日内的所有数据,返回元组
 def getStockPrice(code,startdate=None,days=7):

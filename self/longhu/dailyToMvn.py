@@ -6,7 +6,7 @@ sys.path.append("H:\\github\\tushareB\\")
 import datetime
 
 import tushare as ts
-import self.longhu.globalFunction as globalFunction
+import self.longhu.globalFunction as gf
 import self.longhu.getFromTushare as gt
 import time
 import json
@@ -25,23 +25,25 @@ def brokerInfo(statrDate=None, endDate=None, pagesize=2000):
     try:
         request=Request(LHBYYBSBCS%(statrDate,endDate,pagesize))
         text=urlopen(request,timeout=10).read()                     #type is byte
-        globalFunction.postData(text,urlPost)
+        gf.postData(text,urlPost)
     except Exception as e:
         print(e)
 
 
 def getAllStockData():
-    li = globalFunction.getAllStockCode()
+    li = []
+    for key in gf.getAllStockCode():
+        li.append(key)
     urlPost = 'http://localhost:8080/stock/tradeHistory'
     for i in li:
         textByte = gt.getDayData(i, startDate, endDate)
-        globalFunction.postData(textByte, urlPost, i)
+        gf.postData(textByte, urlPost, i)
 
 
 
 #Main and Run
 
-startDate=globalFunction.lastTddate(str(datetime.datetime.today().date()-datetime.timedelta(days=7)))
+startDate=gf.lastTddate(str(datetime.datetime.today().date()-datetime.timedelta(days=7)))
 endDate=str(datetime.datetime.today().date())
 
 #将每日机构数据导入数据库
