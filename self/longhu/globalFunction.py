@@ -12,13 +12,24 @@ except ImportError:
 
 
 
-#判断是否涨停板
-def IsLimit(code,open,close):
-
-    if close>=round(1.1*open):
-        return True
+#判断是否涨停板,若涨停，返回True，否则返回False;含S的股票名称（ST,S）,涨幅为5%
+def isLimit(code,open,price):
+    name=None
+    if code in getAllStockCode().keys():
+        name=getAllStockCode()[code]
     else:
-        return False
+        print("找不到此代码对应的股票")
+        return
+    if 'S' in name:
+        if price==round(1.05*open,2):
+            return True
+        else:
+            return False
+    else:
+        if price==round(1.1*open,2):
+            return True
+        else:
+            return False
 
 #判断股票涨或跌
 def RaiseOrFall(open,close):
