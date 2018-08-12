@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding:utf8 -*-
 
+import self.longhu.globalFunction as gl
+
 #stockPrice类
 #输入一个长度为8的元组作为参数，只读。参数分别是index,stock_code,tsdate,open,close,average
 #输入参数从gl.getStockPrice()取【参数为code,date,day(某个股票某天后几天内的交易数据)，返回元组，再切片】
@@ -139,17 +141,17 @@ class BrokerScore(object):
 #打分类
 #输入一个长度不限的列表作为参数。
 class Score(object):
-    __broker_code=None
-    __b_count=None
-    __s_count=None
-    __avr_2day=None
-    __avr_3day=None
-    __avr_5day=None
-    __avr_7day=None
-    __avr_10day=None
-    __2day_limit_count=None
-    __max_limit_count=None
-    __score=None
+    __score=0
+    __stockcode=None
+    __listStockPrice=[]
+    __stockPriceDay1=None
+    __stockPriceDay2=None
+    __stockPriceDay3=None
+    __stockPriceDay4=None
+    __stockPriceDay5=None
+    @property
+    def score(self):
+        return self.__score
 
     def __init__(self,list):
         #判断输入参数中每个元素必须是stockPrice类的对象
@@ -158,7 +160,29 @@ class Score(object):
             if isinstance(list[i],StockPrice):
                 flag+=1
         if flag==len(list):
-            self.list=list
+            self.__listStockPrice=list
+            self.__stockcode=list[0].stock_code
+            self.__stockPriceDay1=list[0]
+            self.__stockPriceDay2=list[1]
+            self.__stockPriceDay3=list[1]
+            self.__stockPriceDay4=list[1]
+            self.__stockPriceDay5=list[1]
+
         else:
             print("error")
+
+    #判断第二天开盘状态
+    def daytwoOpen(self):
+        #第二天开盘涨停
+        if gl.isLimit(self.__stockcode,self.__stockPriceDay1.close,self.__stockPriceDay2.open):
+            #第二天最低价=最高价（一字涨停）
+            if self.__stockPriceDay2.high==self.__stockPriceDay2.low:
+                self.__score+=1
+            #最低价<最高价（高开低走）
+            elif self.__stockPriceDay2.low<self.__stockPriceDay2.high:
+                self.__score
+
+        else:
+            pass
+
 

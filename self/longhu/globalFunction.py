@@ -38,6 +38,16 @@ def RaiseOrFall(open,close):
     else:
         return False
 
+#输入三个价格，返回幅度
+def Range(priceLastClose,priceOpen,priceClose):
+    '''
+        priceLastClose:昨日收盘价（今日开盘基准价）
+        priceOpen:今日开盘价
+        priceClose：今日收盘价或当前价格
+    '''
+    range=(priceClose-priceOpen)/priceLastClose
+    return format(range,'.00%')
+
 #返回上一交易日（字符串格式）
 def lastTddate(strdate):
     date=None
