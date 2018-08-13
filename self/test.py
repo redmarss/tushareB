@@ -21,10 +21,10 @@ import json
 #     startdate=str(gl.diffDay(startdate,1))
 #     ad.getData(startdate)
 #ad.getData("2018-07-06")
-# ad.getAllBroker()
-# ad.ScoreBroker('80141202',"600000","2017-05-05")
 
-print(gl.isLimit('600986',5.56,6.11))
+ad.ScoreBroker('80141202',"600000","2017-05-05")
+
+
 
 
 

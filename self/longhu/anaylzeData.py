@@ -29,7 +29,8 @@ def ScoreBroker(broker_code=None,stock_code=None,ts_date=None):
     if len(t_stock_price)==count_day+1:             #至少有count_day天的数据，否则可能是停牌或新股（会报边界错误）
         for i in range(len(t_stock_price)):
             list_stock_price.append(gc.StockPrice(t_stock_price[i]))
-        gc.Score(list_stock_price)
+        calc=gc.Score(list_stock_price)
+        calc.calcScore()
     else:
         print("股票天数长度不对")
         raise IndexError

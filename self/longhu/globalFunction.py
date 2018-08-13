@@ -14,6 +14,13 @@ except ImportError:
 
 #判断是否涨停板,若涨停，返回True，否则返回False;含S的股票名称（ST,S）,涨幅为5%
 def isLimit(code,open,price):
+    if isinstance(code,str)==False:
+        code=str(code)
+    if isinstance(open,float)==False:
+        open=float(open)
+    if isinstance(price,float)==False:
+        price=float(price)
+
     name=None
     if code in getAllStockCode().keys():
         name=getAllStockCode()[code]
@@ -44,9 +51,10 @@ def Range(priceLastClose,priceOpen,priceClose):
         priceLastClose:昨日收盘价（今日开盘基准价）
         priceOpen:今日开盘价
         priceClose：今日收盘价或当前价格
+        返回：收盘-开盘的涨幅，保留4位小数
     '''
     range=(priceClose-priceOpen)/priceLastClose
-    return format(range,'.00%')
+    return round(range,4)
 
 #返回上一交易日（字符串格式）
 def lastTddate(strdate):

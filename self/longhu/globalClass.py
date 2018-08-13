@@ -8,7 +8,7 @@ import self.longhu.globalFunction as gl
 #输入参数从gl.getStockPrice()取【参数为code,date,day(某个股票某天后几天内的交易数据)，返回元组，再切片】
 class StockPrice(object):
     def __init__(self,tuple):
-        if len(tuple==8):
+        if len(tuple)==8:
             self.tuple=tuple
         else:
             print("类参数输入错误")
@@ -161,28 +161,56 @@ class Score(object):
                 flag+=1
         if flag==len(list):
             self.__listStockPrice=list
-            self.__stockcode=list[0].stock_code
+            self.__stockcode=list[0].stock_code[2:]
             self.__stockPriceDay1=list[0]
             self.__stockPriceDay2=list[1]
-            self.__stockPriceDay3=list[1]
-            self.__stockPriceDay4=list[1]
-            self.__stockPriceDay5=list[1]
+            self.__stockPriceDay3=list[2]
+            self.__stockPriceDay4=list[3]
+            self.__stockPriceDay5=list[4]
 
         else:
             print("error")
 
-    #判断第二天开盘状态
-    def daytwoOpen(self):
+    #处理第二天的分数
+    def __day2(self):
         #第二天开盘涨停
-        if gl.isLimit(self.__stockcode,self.__stockPriceDay1.close,self.__stockPriceDay2.open):
+
+        if gl.isLimit(self.__stockcode,self.__stockPriceDay1.close,self.__stockPriceDay2.open)==True:
             #第二天最低价=最高价（一字涨停）
             if self.__stockPriceDay2.high==self.__stockPriceDay2.low:
-                self.__score+=1
+                self.__score+=1             #加一分
             #最低价<最高价（高开低走）
             elif self.__stockPriceDay2.low<self.__stockPriceDay2.high:
-                self.__score
+                #加（收盘价-开盘价）幅度*10
+                self.__score=self.__score+gl.Range(self.__stockPriceDay1.close,self.__stockPriceDay2.open,self.__stockPriceDay2.close)*10
 
         else:
-            pass
+            #收盘>开盘
+            if self.__stockPriceDay2.close>self.__stockPriceDay2.open:
+                #开盘不涨停，收盘>开盘，直接+4分
+                self.__score+=4
+                #收盘涨停，附加3分
+                if gl.isLimit(self.__stockcode,self.__stockPriceDay2.open,self.__stockPriceDay2.close):
+                    self.__score+=3
+                #收盘不涨停，附加（收盘价-开盘价）幅度*10
+                else:
+                    self.__score=self.__score+gl.Range(self.__stockPriceDay1.close,self.__stockPriceDay2.open,self.__stockPriceDay2.close)*10
+
+                #另一个条件：如果第二日收盘不如前一日收盘高，减去4分
+                if self.__stockPriceDay2.close<=self.__stockPriceDay1.close:
+                    self.__score-=4
+            #收盘<=开盘,减去2分，再减去（收盘价-开盘价）幅度*10
+            else:
+                self.__score-=2
+                self.__score=self.__score-gl.Range(self.__stockPriceDay1.close,self.__stockPriceDay2.open,self.__stockPriceDay2.close)*10
+
+    #处理第三天的分数
+    def __day3(self):
+        pass
+
+    #算总分
+    def calcScore(self):
+        self.__day2()
+        print(self.__score)
 
 
