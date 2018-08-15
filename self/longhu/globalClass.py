@@ -170,25 +170,41 @@ class Score(object):
 
         else:
             print("error")
+    #判断第一天状态
+    def __day1(self):
+        #机构买入后当天上涨
+        if self.__stockPriceDay1.close>self.__stockPriceDay1.open:
+            return True
+        else:
+            return False
+
 
     #处理第二天的分数
     def __day2(self):
-        #第二天开盘涨停
 
-        if gl.isLimit(self.__stockcode,self.__stockPriceDay1.close,self.__stockPriceDay2.open)==True:
+        #第二天开盘涨停
+        if gl.isLimit(self.__stockcode,self.__stockPriceDay1.close,self.__stockPriceDay2.open):
             #第二天最低价=最高价（一字涨停）
             if self.__stockPriceDay2.high==self.__stockPriceDay2.low:
-                self.__score+=1             #加一分
+                self.__score+=4            #加4分
             #最低价<最高价（高开低走）
             elif self.__stockPriceDay2.low<self.__stockPriceDay2.high:
-                #加（收盘价-开盘价）幅度*10
-                self.__score=self.__score+gl.Range(self.__stockPriceDay1.close,self.__stockPriceDay2.open,self.__stockPriceDay2.close)*10
-
+                #加（收盘价-最低价）幅度*10
+                self.__score=self.__score+gl.Range(self.__stockPriceDay1.close,self.__stockPriceDay2.low,self.__stockPriceDay2.close)*10*2
+            #理论上不存在第三种可能
+            else:
+                print("参数输入错误")
+                return
+        #第二天开盘未涨停
         else:
             #收盘>开盘
             if self.__stockPriceDay2.close>self.__stockPriceDay2.open:
-                #开盘不涨停，收盘>开盘，直接+4分
-                self.__score+=4
+                #(最高价-最低价)幅度<0.02，加4分
+                if gl.Range(self.__stockPriceDay1.close,self.__stockPriceDay2.low,self.__stockPriceDay2.high)<=0.02:
+                    self.__score+=4
+                # (最高价-最低价)幅度>0.02，加2分
+                else:
+                    self.__score+=2
                 #收盘涨停，附加3分
                 if gl.isLimit(self.__stockcode,self.__stockPriceDay2.open,self.__stockPriceDay2.close):
                     self.__score+=3
@@ -204,13 +220,57 @@ class Score(object):
                 self.__score-=2
                 self.__score=self.__score-gl.Range(self.__stockPriceDay1.close,self.__stockPriceDay2.open,self.__stockPriceDay2.close)*10
 
+
+    #第3-5天使用同一个函数
+    def __day3to5(self,lastDay,today):
+        #输入参数都为StockPrice类
+        if isinstance(lastDay,StockPrice) and isinstance(today,StockPrice):
+            # 开盘涨停，加3分
+            if gl.isLimit(self.__stockcode,lastDay.close,today.open):
+                self.__score+=3
+            # 开盘未涨停，但涨幅大于5%，加2分
+            elif gl.Range(lastDay.close,lastDay.close,today.open)>0.05:
+                self.__score+=2
+                # 开盘>5%,最高价涨停，附加1分
+                if gl.isLimit(self.__stockcode,today.open,today.high):
+                    self.__score+=1
+                # 收盘<开盘，附减（开盘-收盘）幅度*10
+                if today.close<=today.open:
+                    self.__score=self.__score+gl.Range(lastDay.close,today.open,today.close)*10
+            # 开盘未涨停，但涨幅大于0%,加1分，再附加（收盘-开盘）幅度*10
+            elif gl.Range(lastDay.close,lastDay.close,today.open)>=0:
+                self.__score+=1
+                self.__score=self.__score+gl.Range(lastDay.close,today.open,today.close)*10
+            #开盘涨幅<0%
+            else:
+                # 收盘>开盘,加（收盘-开盘）幅度*10
+                if today.close>today.open:
+                    self.__score=self.__score+gl.Range(lastDay.close,today.open,today.close)*10
+                # 收盘<开盘，加（收盘-开盘）幅度*20
+                else:
+                    self.__score=self.__score+gl.Range(lastDay.close,today.open,today.close)*10*2
+
     #处理第三天的分数
     def __day3(self):
-        pass
+        self.__day3to5(self.__stockPriceDay2,self.__stockPriceDay3)
+
+    #处理第四天的分数
+    def __day4(self):
+        self.__day3to5(self.__stockPriceDay3,self.__stockPriceDay4)
+
+    #处理第五天的分数
+    def __day5(self):
+        self.__day3to5(self.__stockPriceDay4,self.__stockPriceDay5)
+
+
 
     #算总分
     def calcScore(self):
-        self.__day2()
+        if self.__day1():
+            self.__day2()
+            self.__day3()
+            self.__day4()
+            self.__day5()
         print(self.__score)
 
 
