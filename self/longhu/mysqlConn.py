@@ -17,14 +17,15 @@ dbconn = pymysql.connect(**config)
 
 # 根据sql语句查询所有数据，返回类型为元组
 def selectSqlAll(sql):
-    try:
-        with dbconn.cursor() as cursor:
+    with dbconn.cursor() as cursor:
+        try:
             cursor.execute(sql)
             result = cursor.fetchall()
-        return result
-        dbconn.commit()
-    except:
-        print("sql语句有误，请重新输入")
+        except:
+            print("sql语句有误，请重新输入")
+            raise IOError
+    #dbconn.close()
+    return result
 
 
 # 增删改均可用此函数，先确保sql语句正确(要设定mysql:SET SQL_SAFE_UPDATES = 0)
@@ -32,13 +33,15 @@ def OperateSql(sql):
     try:
         with dbconn.cursor() as cursor:
             cursor.execute(sql)
+            dbconn.commit()
             print("操作成功")
         return True
+
     except:
         print("操作失败，请重试")
+        raise IOError
         return False
-    finally:
-        dbconn.close()
+
 
 #将一个DataFrame存入mysql的table表中
 def DataframeToSql(df,table):

@@ -16,7 +16,7 @@ def ScoreBroker(broker_code=None,stock_code=None,ts_date=None):
     brokerScoreCls=None
     count_day=10    #计数天数
 #取出机构分数数据并存入BrokerScore类实例中，方便修改
-    sql="select * from broker_score where broker_code='%s'"%broker_code
+    sql=r"select * from broker_score where broker_code='%s'"%broker_code
     try:
         list_broker_info=list(msql.selectSqlAll(sql)[0])            #只取第一条结果，也只应有一条
         brokerScoreCls=gc.BrokerScore(list_broker_info)
@@ -29,24 +29,45 @@ def ScoreBroker(broker_code=None,stock_code=None,ts_date=None):
     #该机构在ts_date买入stock_code后十天的表现，每天的价格存入StockPrice类中，每个类Append至list_stock_price中
     t_stock_price=gl.getStockPrice(stock_code,ts_date,count_day)
     list_stock_price=[]
-    t_stock_price=((81, 'sh600000', datetime.date(2017, 5, 5), Decimal('11.24'), Decimal('11.25'), Decimal('11.26'), Decimal('10.91'), Decimal('401945.00')), (82, 'sh600000', datetime.date(2017, 5, 8), Decimal('11.17'), Decimal('11.33'), Decimal('11.33'), Decimal('11.10'), Decimal('435685.00')), (83, 'sh600000', datetime.date(2017, 5, 9), Decimal('11.04'), Decimal('11.09'), Decimal('11.15'), Decimal('11.02'), Decimal('192254.00')), (84, 'sh600000', datetime.date(2017, 5, 10), Decimal('11.09'), Decimal('10.98'), Decimal('11.16'), Decimal('10.94'), Decimal('283594.00')), (85, 'sh600000', datetime.date(2017, 5, 11), Decimal('10.95'), Decimal('11.09'), Decimal('11.12'), Decimal('10.94'), Decimal('273129.00')), (86, 'sh600000', datetime.date(2017, 5, 12), Decimal('11.09'), Decimal('11.43'), Decimal('11.45'), Decimal('11.07'), Decimal('457334.00')), (87, 'sh600000', datetime.date(2017, 5, 15), Decimal('11.48'), Decimal('11.48'), Decimal('11.60'), Decimal('11.39'), Decimal('299658.00')), (88, 'sh600000', datetime.date(2017, 5, 16), Decimal('11.45'), Decimal('11.48'), Decimal('11.49'), Decimal('11.33'), Decimal('248753.00')), (89, 'sh600000', datetime.date(2017, 5, 17), Decimal('11.45'), Decimal('11.43'), Decimal('11.47'), Decimal('11.33'), Decimal('334344.00')), (90, 'sh600000', datetime.date(2017, 5, 18), Decimal('11.35'), Decimal('11.28'), Decimal('11.38'), Decimal('11.24'), Decimal('306579.00')), (91, 'sh600000', datetime.date(2017, 5, 19), Decimal('11.30'), Decimal('11.29'), Decimal('11.33'), Decimal('11.21'), Decimal('286106.00')))
-    if len(t_stock_price)==count_day+1:             #至少有count_day天的数据，否则可能是停牌或新股（会报边界错误）
+    if len(t_stock_price)==count_day:             #至少有count_day天的数据，否则可能是停牌或新股（会报边界错误）
         for i in range(len(t_stock_price)):
             list_stock_price.append(gc.StockPrice(t_stock_price[i]))
         calc=gc.Score(list_stock_price)
         today_score=calc.calcScore()
     else:
-        print("股票天数长度不对")
-        raise IndexError
+        print("股票价格的长度不对(%s,%s,%s)"%(stock_code,ts_date,broker_code))
+        return
 #2.计算平均score,更新b_count次数
     avr_scroe=(brokerScoreCls.score*brokerScoreCls.b_count+today_score)/(brokerScoreCls.b_count+1)
     b_count_temp=brokerScoreCls.b_count
     b_count_temp+=1
     brokerScoreCls.b_count=b_count_temp
-    brokerScoreCls.score=avr_scroe
+    brokerScoreCls.score=float('%.2f'%avr_scroe)
 
-#将ScoreBroker类实例存入数据库（调用函数）
+#将ScoreBroker类实例存入数据库（调用类函数）
+    brokerScoreCls.updateMysql()
 
+#输入起始、结束日期，计算broker_buy_stock_info中所有交易的“得分”
+def RunScore(startdate='2017-01-01',enddate='2018-12-31'):
+    sql="SELECT broker_code,stock_code,ts_date,broker_buy_summary_id FROM broker_buy_summary as a,broker_buy_stock_info as b where a.id=b.broker_buy_summary_id and score_flag=0 and ts_date between '%s' and '%s' "%(startdate,enddate)
+    t=msql.selectSqlAll(sql)
+    for i in range(len(t)):
+        ScoreBroker(t[i][0],t[i][1][0:6],str(t[i][2]))
+        sql="update broker_buy_stock_info set score_flag=1 where broker_buy_summary_id='%s'"%t[i][3]
+        msql.OperateSql(sql)
+
+#根据日期显示Top100的出现次数，返回dataframe('broker_code','broker_name','b_count','score')
+def Last3MonthTrade(startdate="2017-01-01"):
+    df=pd.DataFrame(columns=('broker_code','broker_name','b_count','score'))
+    #先从broker_score表中将分数前100名的机构取出
+    sql1="SELECT broker_code,score FROM tushare.broker_score order by score desc LIMIT 0, 100"
+    t=msql.selectSqlAll(sql1)
+
+    for i in range(len(t)):
+        sql2='SELECT count(*),broker_name FROM broker_buy_summary as a,broker_buy_stock_info as b where a.id=b.broker_buy_summary_id and ts_date>="%s" and broker_code="%s"'%(startdate,t[i][0])
+        t2=msql.selectSqlAll(sql2)
+        df.loc[i]=[t[i][0],t2[0][1],t2[0][0],t[i][1]]
+    return df
 
 
 

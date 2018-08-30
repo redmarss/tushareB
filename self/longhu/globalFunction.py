@@ -177,9 +177,8 @@ def getStockPrice(code,startdate=None,days=7):
     code = ct._code_to_symbol(code)
     if startdate==None:
         startdate=str(datetime.datetime.today().date())
-    enddate=diffDay(startdate,days)
 
-    sql="select * from stock_trade_history_info where stock_code='%s' and ts_date between '%s' and '%s'"%(code,startdate,enddate)
+    sql="select * from stock_trade_history_info where stock_code='%s' and ts_date >='%s' order by ts_date limit 0,%i"%(code,startdate,days)
     try:
         t=msql.selectSqlAll(sql)
         return t
@@ -189,7 +188,7 @@ def getStockPrice(code,startdate=None,days=7):
 
 #取得数据库中所有机构代码及名称,返回列表
 def getAllBrokerInfo():
-    sql="select broker_code,broker_name from broker_buy_summary"
+    sql="select broker_code from broker_buy_summary"
     t=msql.selectSqlAll(sql)
     #去除t中重复值
     list_temp=list(t)

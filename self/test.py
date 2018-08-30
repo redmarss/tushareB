@@ -3,6 +3,7 @@
 
 
 import self.longhu.anaylzeData as ad
+
 import self.longhu.RunOnce as ro
 import self.longhu.globalFunction as gl
 import self.longhu.getFromTushare as gt
@@ -22,8 +23,8 @@ import json
 #     ad.getData(startdate)
 #ad.getData("2018-07-06")
 
-ad.ScoreBroker('80141202',"600000","2017-05-05")
-
+# ad.ScoreBroker('80035346','200045','2017-01-03')
+ad.Last3MonthTrade("2018-06-01")
 
 
 

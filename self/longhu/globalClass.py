@@ -2,6 +2,7 @@
 # -*- coding:utf8 -*-
 
 import self.longhu.globalFunction as gl
+import self.longhu.mysqlConn as ms
 
 #stockPrice类
 #输入一个长度为8的元组作为参数，只读。参数分别是index,stock_code,tsdate,open,close,average
@@ -42,7 +43,6 @@ class StockPrice(object):
 class BrokerScore(object):
     __index=None
     __broker_code=None
-    __broker_name=None
     __b_count=None
     __s_count=None
     __avr_2day=None
@@ -57,21 +57,20 @@ class BrokerScore(object):
 
 
     def __init__(self,list):
-        if len(list)==13:
+        if len(list)==12:
             self.list=list
             self.__index=list[0]
             self.__broker_code=list[1]
-            self.__broker_name=list[2]
-            self.__b_count=list[3]
-            self.__s_count=list[4]
-            self.__avr_2day=list[5]
-            self.__avr_3day=list[6]
-            self.__avr_5day=list[7]
-            self.__avr_7day=list[8]
-            self.__avr_10day=list[9]
-            self.__day2limit_count=list[10]
-            self.__maxlimit_count=list[11]
-            self.__score=list[12]
+            self.__b_count=list[2]
+            self.__s_count=list[3]
+            self.__avr_2day=list[4]
+            self.__avr_3day=list[5]
+            self.__avr_5day=list[6]
+            self.__avr_7day=list[7]
+            self.__avr_10day=list[8]
+            self.__day2limit_count=list[9]
+            self.__maxlimit_count=list[10]
+            self.__score=list[11]
         else:
             print("类参数输入错误")
             return
@@ -85,21 +84,14 @@ class BrokerScore(object):
 
     @property
     def broker_code(self):
-        return self.__broker_code
+        return str(self.__broker_code)
     @broker_code.setter
     def broker_code(self):
         pass
 
     @property
-    def broker_name(self):
-        return self.__broker_name
-    @broker_name.setter
-    def broker_name(self):
-        pass
-
-    @property
     def b_count(self):
-        return self.__b_count
+        return int(self.__b_count)
     @b_count.setter
     def b_count(self,value):
         self.__b_count=value
@@ -162,10 +154,14 @@ class BrokerScore(object):
 
     @property
     def score(self):
-        return self.__score
+        return float(self.__score)
     @score.setter
     def score(self,value):
         self.__score=value
+
+    def updateMysql(self):
+        sql=r'update broker_score set b_count=%s,s_count=%s,avr_2day=%s,avr_3day=%s,avr_5day=%s,avr_7day=%s,avr_10day=%s,2daylimit_count=%s,maxlimit_count=%s,score=%s where broker_code="%s"'%(self.__b_count,self.__s_count,self.__avr_2day,self.__avr_3day,self.__avr_5day,self.__avr_7day,self.__avr_10day,self.__day2limit_count,self.__maxlimit_count,self.__score,self.__broker_code)
+        ms.OperateSql(sql)
 
 #打分类
 #输入一个长度不限的列表作为参数。
@@ -300,6 +296,6 @@ class Score(object):
             self.__day3()
             self.__day4()
             self.__day5()
-        return self.score
+        return float('%.2f'%self.score)
 
 
