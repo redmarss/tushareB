@@ -70,6 +70,11 @@ def Last3MonthTrade(startdate="2017-01-01"):
     return df
 
 
+#根据机构代码、交易日期计算该机构近5次交易的“得分”
+def Last5TradeScore(broker_code,ts_date):
+    
+
+
 
 
 
