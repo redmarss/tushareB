@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5e95df55-852d-4ebc-81d0-40b326e83d7d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self/longhu/RunOnce.py" beforeDir="false" afterPath="$PROJECT_DIR$/self/longhu/RunOnce.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/self/longhu/anaylzeData.py" beforeDir="false" afterPath="$PROJECT_DIR$/self/longhu/anaylzeData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self/longhu/getFromTushare.py" beforeDir="false" afterPath="$PROJECT_DIR$/self/longhu/getFromTushare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self/longhu/globalFunction.py" beforeDir="false" afterPath="$PROJECT_DIR$/self/longhu/globalFunction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self/longhu/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/self/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/self/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,20 +22,20 @@
       <file leaf-file-name="dailyToMvn.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/self/longhu/dailyToMvn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+            <state relative-caret-position="561">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
+              <folding>
+                <element signature="e#588#1123#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="globalClass.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self/longhu/globalClass.py">
+      <file leaf-file-name="getFromTushare.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/self/longhu/getFromTushare.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2771">
-              <caret line="164" selection-start-line="164" selection-end-line="164" />
-              <folding>
-                <element signature="e#45#84#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="453">
+              <caret line="85" column="50" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -39,9 +44,40 @@
         <entry file="file://$PROJECT_DIR$/self/test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+              <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
               <folding>
                 <element signature="e#45#81#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="globalClass.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/self/longhu/globalClass.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+              <folding>
+                <element signature="e#45#84#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="globalFunction.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/self/longhu/globalFunction.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+              <folding>
+                <element signature="e#356#917#0" />
+                <element signature="e#961#1026#0" />
+                <element signature="e#1093#1297#0" />
+                <element signature="e#1344#1585#0" />
+                <element signature="e#1613#2377#0" />
+                <element signature="e#2443#2933#0" />
+                <element signature="e#3001#3655#0" />
+                <element signature="e#3694#4139#0" />
               </folding>
             </state>
           </provider>
@@ -50,13 +86,10 @@
       <file leaf-file-name="anaylzeData.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/self/longhu/anaylzeData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="73" column="41" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="41" />
+            <state relative-caret-position="453">
+              <caret line="46" column="8" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="20" />
               <folding>
                 <element signature="e#44#54#0" expanded="true" />
-                <element signature="e#497#1753#0" />
-                <element signature="e#2462#3019#0" />
-                <marker date="1536135051037" expanded="true" signature="3091:3113" ph="..." />
               </folding>
             </state>
           </provider>
@@ -65,8 +98,11 @@
       <file leaf-file-name="RunOnce.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/self/longhu/RunOnce.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+            <state relative-caret-position="232">
+              <caret line="43" column="68" lean-forward="true" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
+              <folding>
+                <element signature="e#43#82#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,15 +126,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="5644">
               <caret line="334" selection-start-line="334" selection-end-line="334" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="connections.py" pinned="false" current-in-tab="false">
-        <entry file="file://H:/Anaconda/Lib/site-packages/pymysql/connections.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13872">
-              <caret line="836" selection-start-line="836" selection-end-line="836" />
             </state>
           </provider>
         </entry>
@@ -133,24 +160,24 @@
       <list>
         <option value="$PROJECT_DIR$/self/init/getBroker.py" />
         <option value="$PROJECT_DIR$/20180629.json" />
-        <option value="$PROJECT_DIR$/self/longhu/getFromTushare.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/self/__init__.py" />
         <option value="$PROJECT_DIR$/tushare/stock/ref_vars.py" />
         <option value="$PROJECT_DIR$/tushare/stock/trading.py" />
         <option value="$PROJECT_DIR$/self/longhu/dailyToMvn.py" />
-        <option value="$PROJECT_DIR$/self/longhu/globalFunction.py" />
         <option value="$PROJECT_DIR$/self/longhu/mysqlConn.py" />
         <option value="$PROJECT_DIR$/self/longhu/globalClass.py" />
-        <option value="$PROJECT_DIR$/self/test.py" />
-        <option value="$PROJECT_DIR$/self/longhu/RunOnce.py" />
         <option value="$PROJECT_DIR$/self/longhu/testFile.py" />
+        <option value="$PROJECT_DIR$/self/longhu/getFromTushare.py" />
+        <option value="$PROJECT_DIR$/self/longhu/globalFunction.py" />
+        <option value="$PROJECT_DIR$/self/longhu/RunOnce.py" />
+        <option value="$PROJECT_DIR$/self/test.py" />
         <option value="$PROJECT_DIR$/self/longhu/anaylzeData.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1273" />
+    <option name="x" value="-7" />
     <option name="width" value="1296" />
     <option name="height" value="1010" />
   </component>
@@ -219,7 +246,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.testFile">
+  <component name="RunManager" selected="Python.test">
     <configuration name="dailyToMvn" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tushareB" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -300,8 +327,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.testFile" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.testFile" />
         <item itemvalue="Python.dailyToMvn" />
         <item itemvalue="Python.globalFunction" />
       </list>
@@ -388,14 +415,20 @@
       <option name="project" value="LOCAL" />
       <updated>1535616575306</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="test">
+      <created>1536281045949</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1536281045949</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1272" y="-8" width="1296" height="1010" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24921875" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24921875" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32662192" />
@@ -432,6 +465,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/self/longhu/anaylzeData.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -439,18 +479,21 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="74" />
+      <option name="time" value="77" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="name1" language="Python" />
-        <watch expression="name2" language="Python" />
-        <watch expression="dirsss[k]" language="Python" />
+        <watch expression="t" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>t</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>dirs[k]</expression-string>
         <language-id>Python</language-id>
@@ -493,11 +536,6 @@
       </expression>
       <expression>
         <expression-string>sql</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>len(t_stock_price)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -647,7 +685,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/20180629.json" />
     <entry file="file://$PROJECT_DIR$/self/longhu/dailyToSql.py" />
-    <entry file="file://$PROJECT_DIR$/self/longhu/main.py" />
     <entry file="file://$PROJECT_DIR$/main.py" />
     <entry file="file://$PROJECT_DIR$/tushare/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -704,13 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/self/longhu/getFromTushare.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tushare/stock/cons.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6970">
@@ -746,13 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/self/longhu/globalFunction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3043">
-          <caret line="183" selection-start-line="183" selection-end-line="183" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://H:/Anaconda/Lib/site-packages/pymysql/connections.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13872">
@@ -760,35 +783,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/self/longhu/globalClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2771">
-          <caret line="164" selection-start-line="164" selection-end-line="164" />
-          <folding>
-            <element signature="e#45#84#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/self/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-          <folding>
-            <element signature="e#45#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/self/longhu/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/self/longhu/RunOnce.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/self/longhu/mysqlConn.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -805,22 +801,77 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/self/longhu/testFile.py" />
+    <entry file="file://$PROJECT_DIR$/self/longhu/main.py" />
     <entry file="file://$PROJECT_DIR$/self/longhu/dailyToMvn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+        <state relative-caret-position="561">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#588#1123#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/self/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+          <folding>
+            <element signature="e#45#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/self/longhu/globalClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="e#45#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/self/longhu/getFromTushare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="85" column="50" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/self/longhu/globalFunction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+          <folding>
+            <element signature="e#356#917#0" />
+            <element signature="e#961#1026#0" />
+            <element signature="e#1093#1297#0" />
+            <element signature="e#1344#1585#0" />
+            <element signature="e#1613#2377#0" />
+            <element signature="e#2443#2933#0" />
+            <element signature="e#3001#3655#0" />
+            <element signature="e#3694#4139#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/self/longhu/RunOnce.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="43" column="68" lean-forward="true" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
+          <folding>
+            <element signature="e#43#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/self/longhu/anaylzeData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="73" column="41" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="41" />
+        <state relative-caret-position="453">
+          <caret line="46" column="8" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="20" />
           <folding>
             <element signature="e#44#54#0" expanded="true" />
-            <element signature="e#497#1753#0" />
-            <element signature="e#2462#3019#0" />
-            <marker date="1536135051037" expanded="true" signature="3091:3113" ph="..." />
           </folding>
         </state>
       </provider>

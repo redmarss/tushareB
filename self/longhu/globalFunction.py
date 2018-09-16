@@ -142,22 +142,6 @@ def postData(textByte,urlPost,code=None):
 
 #获取所有股票代码
 def getAllStockCode():
-    #stock_CodeUrl="http://quote.eastmoney.com/stocklist.html"
-    # allCodeList=[]
-    # csvFileSH=open(r"H:\github\tushareB\self\longhu\SHALIST.csv","r")
-    # readerSH=csv.reader(csvFileSH)
-    # for item in readerSH:
-    #     if readerSH.line_num==1:
-    #         continue
-    #     allCodeList.append(item[0])
-    #
-    # csvFileSZ=open(r"H:\github\tushareB\self\longhu\SZALIST.csv","r")
-    # readerSZ=csv.reader(csvFileSZ)
-    # for item in readerSZ:
-    #     if readerSZ.line_num==1:
-    #         continue
-    #     allCodeList.append(item[0])
-    # return allCodeList
     dict_stock={}
     csvFileSH=r"H:\github\tushareB\self\longhu\SHALIST.csv"
     csvFileSZ=r"H:\github\tushareB\self\longhu\SZALIST.csv"

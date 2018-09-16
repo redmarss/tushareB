@@ -24,7 +24,7 @@ import json
 #ad.getData("2018-07-06")
 
 # ad.ScoreBroker('80035346','200045','2017-01-03')
-ad.Last3MonthTrade("2018-06-01")
+ad.Last5TradeScore('80149056','2018-04-27')
 
 
 
