@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5e95df55-852d-4ebc-81d0-40b326e83d7d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/self/longhu/SHALIST.csv" beforeDir="false" afterPath="$PROJECT_DIR$/self/longhu/SHALIST.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/self/longhu/SZALIST.csv" beforeDir="false" afterPath="$PROJECT_DIR$/self/longhu/SZALIST.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/self/longhu/dailyToMvn.py" beforeDir="false" afterPath="$PROJECT_DIR$/self/longhu/dailyToMvn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/self/testPlt.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,11 +17,8 @@
       <file leaf-file-name="dailyToMvn.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/self/longhu/dailyToMvn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="46" column="87" selection-start-line="46" selection-start-column="87" selection-end-line="46" selection-end-column="87" />
-              <folding>
-                <element signature="e#588#1123#0" />
-              </folding>
+            <state relative-caret-position="633">
+              <caret line="41" column="73" selection-start-line="41" selection-start-column="73" selection-end-line="41" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -41,7 +35,7 @@
       <file leaf-file-name="getFromTushare.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/self/longhu/getFromTushare.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1326">
+            <state relative-caret-position="810">
               <caret line="85" column="50" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
             </state>
           </provider>
@@ -421,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537090774946</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="test">
+      <created>1538905184598</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1538905184598</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -812,13 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/self/longhu/getFromTushare.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="85" column="50" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/self/longhu/globalFunction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -866,13 +860,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/self/longhu/getFromTushare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="85" column="50" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/self/longhu/dailyToMvn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="46" column="87" selection-start-line="46" selection-start-column="87" selection-end-line="46" selection-end-column="87" />
-          <folding>
-            <element signature="e#588#1123#0" />
-          </folding>
+        <state relative-caret-position="633">
+          <caret line="41" column="73" selection-start-line="41" selection-start-column="73" selection-end-line="41" selection-end-column="73" />
         </state>
       </provider>
     </entry>
