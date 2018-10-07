@@ -44,7 +44,7 @@ def getAllStockData():
 
 #Main and Run
 
-startDate=gl.lastTddate(str(datetime.datetime.today().date()-datetime.timedelta(days=7)))
+startDate=gl.lastTddate(str(datetime.datetime.today().date()-datetime.timedelta(days=14)))
 endDate=str(datetime.datetime.today().date())
 
 #将每日机构数据导入数据库
