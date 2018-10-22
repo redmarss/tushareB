@@ -153,6 +153,8 @@ def getAllStockCode():
             for row in reader:
                 if reader.line_num == 1:
                     continue
+
+                row[0]=row[0].zfill(6)
                 dict_stock[row[0]]=row[1]
     return dict_stock
 
