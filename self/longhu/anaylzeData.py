@@ -56,8 +56,18 @@ def Last5TradeScore_Avg(broker_code,ts_date):
     li_new=map(lambda x:round(x,2),li_new)
     score_last=np.mean(list(li_new))
 
-    return score_last
+    return broker_code,score_last
 
+def CaculatorTop(date=None,top=3):
+    li_score=[]
+    #若日期为空，则日期为今天前的最后一个交易日
+    if date==None:
+        date=gl.lastTddate(str(datetime.datetime.today()-datetime.timedelta(days=1))[:10])
+    sql="select broker_code from broker_buy_summary where ts_date='%s'"%date
+    t=msql.selectSqlAll(sql)
+    for i in range(len(t)):
+        li_score.append(ad.Last5TradeScore_Avg(t[i][0],date))
+    print(li_score)
     
 
 

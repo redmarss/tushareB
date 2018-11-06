@@ -6,6 +6,8 @@ sys.path.append("H:\\github\\tushareB\\")
 import datetime
 import self.longhu.globalFunction as gl
 import self.longhu.getFromTushare as gt
+import self.longhu.mysqlConn as msql
+import self.longhu.anaylzeData as ad
 # import tushare as ts
 # import time
 # import json
@@ -40,6 +42,8 @@ def getAllStockData(startDate=None, endDate=None):
     for i in li:
         textByte = gt.getDayData(i, start, end)                 #从网页获取交易信息
         gl.postData(textByte, urlPost, i)                       #post至mvn
+
+
 
 
 

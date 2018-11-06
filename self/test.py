@@ -3,7 +3,7 @@
 
 
 import self.longhu.anaylzeData as ad
-
+import self.longhu.dailyToMvn as mvn
 import self.longhu.RunOnce as ro
 import self.longhu.globalFunction as gl
 import self.longhu.getFromTushare as gt
@@ -24,7 +24,7 @@ import json
 #ad.getData("2018-07-06")
 
 # ad.ScoreBroker('80035346','200045','2017-01-03')
-print(ad.Last5TradeScore_Avg('80149056','2018-04-27'))
+print()
 
 
 
