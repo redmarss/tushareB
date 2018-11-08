@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #-*-coding:utf8-*-
 #数据库操作类
-#_______________this is test__________
+
 import pymysql
 
 class SingletonModel:
@@ -37,7 +37,7 @@ class SingletonModel:
     #增->返回新增ID
     def insert(self,**kwargs):
         table=kwargs['table']       #取出参数中table名称
-        del kwargs['table']         #将参数中table删除，方便后续操作
+        kwargs.pop('table')         #将参数中table删除，方便后续操作
         sql = 'insert into %s set '%table
         for k,v in kwargs.items():
             sql += "'%s'='%s',"
@@ -70,4 +70,74 @@ class SingletonModel:
 
     #改->返回影响的行数
     def update(self,**kwargs):
+        #表名称
         table = kwargs['table']
+        kwargs.pop('table')
+
+        #where条件
+        where = kwargs['where']
+        kwargs.pop('where')
+
+        sql = 'update %s set '%table
+        for k,v in kwargs.items():
+            sql += "'%s'='%s',"%(k,v)
+        sql = sql.rstrip(',')
+        sql += ' where %s'%where
+        print(sql)
+        try:
+            self.__cursor.execute(sql)
+            self.__db.commit()
+            rowcount = self.__cursor.rowcount
+        except:
+            self.__db.rollback()
+        return rowcount
+
+    #查->单条数据
+    def fetchone(self,**kwargs):
+        table = kwargs['table']
+        #字段
+        field = 'field' in kwargs and kwargs['field'] or '*'
+
+        #where条件
+        where = 'where' in kwargs and 'where '+kwargs['where'] or ''
+
+        #order条件
+        order = 'order' in kwargs and 'order by '+kwargs['order'] or ''
+
+        sql = 'select %s from %s %s %s limit 1'%(field,table,where,order)
+        print(sql)
+
+        try:
+            self.__cursor.execute(sql)
+            data=self.__cursor.fetchone()
+        except:
+            self.__db.rollback()
+        return data
+
+    #查->多条数据
+    def fetchall(self,**kwargs):
+        table = kwargs['table']
+        #字段
+        field = 'field' in kwargs and kwargs['field'] or '*'
+        #where条件
+        where = 'where' in kwargs and 'where '+kwargs['where'] or ''
+        #order
+        order = 'order' in kwargs and 'order by '+kwargs['order'] or ''
+        #limit
+        limit = 'limit' in kwargs and 'limit '+kwargs['limit'] or ''
+
+        sql = 'select %s from %s %s %s %s'%(field,table,where,order,limit)
+        print(sql)
+
+        try:
+            self.__cursor.execute(sql)
+            data = self.__cursor.fetchall()
+        except:
+            self.__db.rollback()
+        return data
+
+    def __del__(self):
+        #关闭数据库连接
+        self.__db.close()
+        print('关闭数据库连接')
+
