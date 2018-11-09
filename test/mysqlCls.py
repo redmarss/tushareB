@@ -2,7 +2,12 @@
 #-*-coding:utf8-*-
 #数据库操作类
 
+import hashlib
+import time
 import pymysql
+#屏蔽Warning警告
+# from warnings import filterwarnings
+# filterwarnings('ignore',category=pymysql.Warning)
 
 class SingletonModel:
     #数据库连接对象
@@ -40,7 +45,7 @@ class SingletonModel:
         kwargs.pop('table')         #将参数中table删除，方便后续操作
         sql = 'insert into %s set '%table
         for k,v in kwargs.items():
-            sql += "'%s'='%s',"
+            sql += "%s='%s',"%(k,v)
         sql=sql.rstrip(',')
         print(sql)
         try:
@@ -142,54 +147,38 @@ class SingletonModel:
         print('关闭数据库连接')
 
 
+#生成md5
+def makeMd5(mstr):
+    hmd5 = hashlib.md5()
+    hmd5.update(mstr.encode("utf-8"))
+    return hmd5.hexdigest()
+
+def getTime():
+    return round(time.time())
+
 if __name__ == '__main__':
     dbObject = SingletonModel(host="localhost", port=3306, user="root", passwd="redmarss", db="test", charset="utf8")
 
-    #创建表
-    print("创建表")
-    sql = "drop table if exists EMPLOYEE；"
-    dbObject.execute(sql)
-    sql = """CREATE TABLE EMPLOYEE (
-         FIRST_NAME  CHAR(20) NOT NULL,
-         LAST_NAME  CHAR(20),
-         AGE INT,  
-         SEX CHAR(1),
-         INCOME FLOAT )"""
-    sql='''CREATE TABLE `user` (
+# 创建表
+#     print("创建表")
+#     sql = "drop table if exists user"
+#     dbObject.execute(sql)
+#     sql='''CREATE TABLE `user` (
+#     `id` int(11) NOT NULL AUTO_INCREMENT,
+#     `name` varchar(50) NOT NULL,
+#     `pwd` char(32) NOT NULL,
+#     `insert_time` int(11) NOT NULL,
+#     PRIMARY KEY (`id`)
+#     ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COMMENT='用户表';
+#     '''
+#     res=dbObject.execute(sql)
+#     print(res)
 
-
-207
-
-          `id` int(11) NOT NULL AUTO_INCREMENT,
-
-
-208
-
-          `name` varchar(50) NOT NULL,
-
-
-209
-
-          `pwd` char(32) NOT NULL,
-
-
-210
-
-          `insert_time` int(11) NOT NULL,
-
-
-211
-
-          PRIMARY KEY (`id`)
-
-
-212
-
-        ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='用户表';
-
-
-
-
-    print(sql)
-    res=dbObject.execute(sql)
-    print(res)
+#写入数据
+    # print("\n写入数据")
+    # pwd = makeMd5("123456")
+    # insert_time = getTime()
+    # # timeArray=time.localtime(insert_time)
+    # # print(time.strftime("%Y-%m-%d %H:%M:%S",timeArray))
+    # res = dbObject.insert(table='user',name='bbbb',pwd=pwd,insert_time=insert_time)
+    # print("插入数据id为%s"%res)
