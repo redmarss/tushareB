@@ -141,14 +141,55 @@ class SingletonModel:
         self.__db.close()
         print('关闭数据库连接')
 
+
 if __name__ == '__main__':
     dbObject = SingletonModel(host="localhost", port=3306, user="root", passwd="redmarss", db="test", charset="utf8")
 
     #创建表
     print("创建表")
-    sql = "drop table if exists user；"
+    sql = "drop table if exists EMPLOYEE；"
     dbObject.execute(sql)
-    sql = "CREATE TABLE 'user'('id' int(11) NOT NULL AUTO_INCREMENT,'name' varchar(50) NOT NULL,'pwd' char(32) NOT NULL,'insert_time' int(11) NOT NULL,PRIMARY KEY('id'))ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='用户表';"
+    sql = """CREATE TABLE EMPLOYEE (
+         FIRST_NAME  CHAR(20) NOT NULL,
+         LAST_NAME  CHAR(20),
+         AGE INT,  
+         SEX CHAR(1),
+         INCOME FLOAT )"""
+    sql='''CREATE TABLE `user` (
+
+
+207
+
+          `id` int(11) NOT NULL AUTO_INCREMENT,
+
+
+208
+
+          `name` varchar(50) NOT NULL,
+
+
+209
+
+          `pwd` char(32) NOT NULL,
+
+
+210
+
+          `insert_time` int(11) NOT NULL,
+
+
+211
+
+          PRIMARY KEY (`id`)
+
+
+212
+
+        ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='用户表';
+
+
+
+
     print(sql)
     res=dbObject.execute(sql)
     print(res)
