@@ -30,7 +30,7 @@ class SingletonModel:
             self.__db = pymysql.connect(host=host,port=int(port),user=user,passwd=passwd,db=db,charset=charset)
 
             #创建一个游标对象
-            self.__cursor = self.__db.cursor(cursor=pymysql.cursors.DictCursor)
+            self.__cursor = self.__db.cursor(cursor=pymysql.cursors.DictCursor)         #返回值为字典形式
         return self._instance
 
     #返回执行execute()方法后影响的行数
@@ -85,7 +85,7 @@ class SingletonModel:
 
         sql = 'update %s set '%table
         for k,v in kwargs.items():
-            sql += "'%s'='%s',"%(k,v)
+            sql += "%s='%s',"%(k,v)
         sql = sql.rstrip(',')
         sql += ' where %s'%where
         print(sql)
@@ -180,5 +180,25 @@ if __name__ == '__main__':
     # insert_time = getTime()
     # # timeArray=time.localtime(insert_time)
     # # print(time.strftime("%Y-%m-%d %H:%M:%S",timeArray))
-    # res = dbObject.insert(table='user',name='bbbb',pwd=pwd,insert_time=insert_time)
+    # res = dbObject.insert(table='user',name='dddd',pwd=pwd,insert_time=insert_time)
     # print("插入数据id为%s"%res)
+
+#查询单条
+    # print("\n查询数据-单条")
+    # res = dbObject.fetchone(table='user', where="name='bbbb'")
+    # print(res)
+
+#查询多条
+    # print("/n查询多条")
+    # res =dbObject.fetchall(table='user',order='id desc',where="id>=3")
+    # print(res,type(res))
+
+#修改数据
+    # print("\n修改数据")
+    # res = dbObject.update(table="user",where="id=2",name="zzzz")
+    # print("影响%s行"%res)
+
+#删除数据
+    # print("\n删除数据")
+    # res = dbObject.delete(table="user", where="id=2")
+    # print("影响%s行"%res)
