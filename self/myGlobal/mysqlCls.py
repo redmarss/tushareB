@@ -141,6 +141,7 @@ class SingletonModel:
             self.__db.rollback()
         return data
 
+    #析构函数
     def __del__(self):
         #关闭数据库连接
         self.__db.close()
@@ -153,11 +154,14 @@ def makeMd5(mstr):
     hmd5.update(mstr.encode("utf-8"))
     return hmd5.hexdigest()
 
+#获取时间戳
 def getTime():
     return round(time.time())
 
-if __name__ == '__main__':
-    dbObject = SingletonModel(host="localhost", port=3306, user="root", passwd="redmarss", db="test", charset="utf8")
+
+#主函数
+# if __name__ == '__main__':
+#     dbObject = SingletonModel(host="localhost", port=3306, user="root", passwd="redmarss", db="test", charset="utf8")
 
 # 创建表
 #     print("创建表")
