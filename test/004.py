@@ -4,6 +4,7 @@
 #第 0004 题： 任一个英文的纯文本文件，统计其中的单词出现的个数。第 0004 题： 任一个英文的纯文本文件，统计其中的单词出现的个数。
 from collections import Counter
 import string
+import re
 
 #simply extend word like: it's => it is
 def extend_word(text):
@@ -37,6 +38,9 @@ def extend_word(text):
         for old_word in old2new.keys():
             _text = _text.replace(old_word, old2new[old_word])
         return _text
+    else:
+        return text
+
 
 
 def return_order_key(record):
@@ -48,18 +52,29 @@ def show_in_order(records):
     for item in items:
         print(item[0], item[1])
 
+def create_list(filename):
+    datalist = []
+    with open(filename,'r') as f:
+        for line in f:
+            content = re.sub("\"|,|\.","",line)
+            content = extend_word(content)
+            datalist.extend(content.strip().split(' '))
+
+    return datalist
 
 if __name__ == "__main__":
-    with open('004_file','r') as file:
-        article = file.read()
-        no_pun_text = article
-        _punctuation = string.punctuation.replace('\'', '')     #  punctuation函数为找出字符串中所有标点
-        for pun in _punctuation:
-            no_pun_text = no_pun_text.replace(pun,'')
-        complete_text = extend_word(no_pun_text)
-        records = dict()
-        for word in complete_text.lower().split():
-            records[word] = records.get(word, 0) + 1
-        show_in_order(records)
+    datalist1 = create_list('004_file')
+    print(Counter(datalist1))
+    # with open('004_file','r') as file:
+    #     article = file.read()
+    #     no_pun_text = article
+    #     _punctuation = string.punctuation.replace('\'', '')     #  punctuation函数为找出字符串中所有标点
+    #     for pun in _punctuation:
+    #         no_pun_text = no_pun_text.replace(pun,'')
+    #     complete_text = extend_word(no_pun_text)
+    #     records = dict()
+    #     for word in complete_text.lower().split():
+    #         records[word] = records.get(word, 0) + 1
+    #     show_in_order(records)
 
 
