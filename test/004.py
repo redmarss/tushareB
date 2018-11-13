@@ -53,7 +53,7 @@ if __name__ == "__main__":
     with open('004_file','r') as file:
         article = file.read()
         no_pun_text = article
-        _punctuation = string.punctuation.replace('\'', '')     #找出字符串中所有标点
+        _punctuation = string.punctuation.replace('\'', '')     #punctuation函数为找出字符串中所有标点
         for pun in _punctuation:
             no_pun_text = no_pun_text.replace(pun,'')
         complete_text = extend_word(no_pun_text)
