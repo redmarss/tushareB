@@ -11,8 +11,9 @@ def process_file(filename):
     global code_lines
     global notation_lines
     global blank_lines
-    with open(filename,'r') as f:
-        for line in f.readline():
+
+    with open(filename, 'r', encoding='utf-8') as f:
+        for line in f.readlines():
             _line = line.strip()
             if not _line:
                 blank_lines.append(_line)
@@ -40,8 +41,9 @@ def show_result():
     notation_lines.clear()
     blank_lines.clear()
 
-def process_files(path=r'\007file'):
+def process_files(path=r'./007file'):
     files = os.listdir(path)
+
     for file in files:
         if file.endswith('.py'):
             print('='*30)
@@ -49,5 +51,7 @@ def process_files(path=r'\007file'):
             process_file(os.path.join(path,file))
             show_result()
 
-process_file(r'\007file')
+
+
+process_files()
 
