@@ -29,4 +29,7 @@ def producer():
     image = image.filter(ImageFilter.BLUR)
     image.save('code.jpg', 'jpeg')
 
+if __name__ == "__main__":
+    producer()
+
 
