@@ -9,7 +9,7 @@ config = {
     'host': "127.0.0.1",
     'database': "tushare",
     'user': "root",
-    'password': "123456",
+    'password': "redmarss",
     'port': 3306,
     'charset': 'utf8',
 }
