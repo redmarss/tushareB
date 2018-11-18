@@ -11,6 +11,15 @@ import urllib.parse
 import http.cookiejar
 import ssl
 import time
+from selenium import webdriver
+
+def get_login_cookie():
+    driver = webdriver.Chrome(executable_path='C:\Program Files (x86)\Google\chromedriver.exe')
+    driver.get('https://www.zhihu.com/signup?next=%2F')
+    locad_butter = driver.find_element_by_css_selector(
+        '#root > div > main > div > div > div > div.SignContainer-inner > div.SignContainer-switch > span')
+    print(locad_butter.text)
+    locad_butter.click()
 
 def get_opener(heads):
     cj = http.cookiejar.CookieJar()
@@ -42,6 +51,8 @@ if __name__ == "__main__":
         "DNT": "1",
         "Connection": "Keep-Alive"
     }
+    cookies_value = get_login_cookie()
+
     opener = get_opener(heads)
     url = "https://www.zhihu.com"
     op = opener.open(url)

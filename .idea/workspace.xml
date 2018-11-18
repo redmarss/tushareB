@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e95df55-852d-4ebc-81d0-40b326e83d7d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/test/013.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/filtered_words.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/tushareB.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tushareB.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/011.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/code.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test/code.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/zhihu.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/zhihu.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,102 +45,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dailyToMvn.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self/longhu/dailyToMvn.py">
+      <file leaf-file-name="zhihu.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/zhihu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="004.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/004.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
+            <state relative-caret-position="173">
+              <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
               <folding>
-                <element signature="e#117#148#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="globalFunction.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self/longhu/globalFunction.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1292">
-              <caret line="157" column="41" selection-start-line="157" selection-start-column="41" selection-end-line="157" selection-end-column="41" />
-              <folding>
-                <element signature="e#961#1026#0" />
-                <element signature="e#1093#1297#0" />
-                <element signature="e#1613#2377#0" />
-                <element signature="e#2443#2933#0" />
-                <element signature="e#3001#3655#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mysqlConn.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self/longhu/mysqlConn.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="010.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/010.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="011-012.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/011-012.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="013.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/013.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
-              <folding>
-                <element signature="e#108#123#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="code.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/code.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="RunOnce.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self/longhu/RunOnce.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="43" column="68" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
-              <folding>
-                <element signature="e#43#82#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="anaylzeData.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self/longhu/anaylzeData.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
-              <caret line="69" column="19" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
-              <folding>
-                <element signature="e#44#54#0" expanded="true" />
+                <element signature="e#75#84#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -204,11 +112,12 @@
         <option value="$PROJECT_DIR$/test/011.py" />
         <option value="$PROJECT_DIR$/test/011-012.py" />
         <option value="$PROJECT_DIR$/test/013.py" />
+        <option value="$PROJECT_DIR$/test/zhihu.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="1272" />
     <option name="y" value="-8" />
     <option name="width" value="1280" />
     <option name="height" value="994" />
@@ -222,6 +131,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -260,7 +170,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
@@ -289,9 +198,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/tushareB.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -299,11 +205,9 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/test/007file/009.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/test/007file/010.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/test/008-009.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/test/010.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/test/code.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/test/008.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/test/1.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/test/zhihu.py</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -404,7 +308,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.013">
+  <component name="RunManager" selected="Python.zhihu">
     <configuration name="010" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tushareB" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -477,7 +381,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="dailyToMvn" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="zhihu" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tushareB" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -485,30 +389,30 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/self/longhu" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/self/longhu/dailyToMvn.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/zhihu.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.dailyToMvn" />
       <item itemvalue="Python.010" />
       <item itemvalue="Python.011" />
       <item itemvalue="Python.011-012" />
       <item itemvalue="Python.013" />
+      <item itemvalue="Python.zhihu" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.zhihu" />
         <item itemvalue="Python.013" />
         <item itemvalue="Python.011-012" />
         <item itemvalue="Python.011" />
         <item itemvalue="Python.010" />
-        <item itemvalue="Python.dailyToMvn" />
       </list>
     </recent_temporary>
   </component>
@@ -670,11 +574,18 @@
       <option name="project" value="LOCAL" />
       <updated>1542337707740</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="test">
+      <created>1542358728051</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1542358728051</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1010" extended-state="6" />
+    <frame x="1273" y="0" width="1296" height="1010" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2453125" />
@@ -724,6 +635,11 @@
           <line>44</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/zhihu.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -732,7 +648,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -795,20 +711,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/self/longhu/globalFunction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="157" column="41" selection-start-line="157" selection-start-column="41" selection-end-line="157" selection-end-column="41" />
-          <folding>
-            <element signature="e#961#1026#0" />
-            <element signature="e#1093#1297#0" />
-            <element signature="e#1613#2377#0" />
-            <element signature="e#2443#2933#0" />
-            <element signature="e#3001#3655#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/self/longhu/mysqlConn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -980,9 +882,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
-          <folding>
-            <element signature="e#45#81#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -993,9 +892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#45#84#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1068,23 +964,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/012.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/011.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test/012.py" />
+    <entry file="file://$PROJECT_DIR$/test/011.py" />
     <entry file="file://$PROJECT_DIR$/test/010.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
+        <state relative-caret-position="527">
           <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
@@ -1094,10 +978,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/013.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+        <state relative-caret-position="678">
+          <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
           <folding>
             <element signature="e#108#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/zhihu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+          <folding>
+            <element signature="e#75#84#0" expanded="true" />
           </folding>
         </state>
       </provider>
