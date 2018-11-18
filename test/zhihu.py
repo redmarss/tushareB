@@ -14,12 +14,17 @@ import time
 from selenium import webdriver
 
 def get_login_cookie():
-    driver = webdriver.Chrome(executable_path='C:\Program Files (x86)\Google\chromedriver.exe')
+    chrome_option = webdriver.ChromeOptions()
+    chrome_option.add_argument('headless')              #配置参数使chrome后台运行
+    driver = webdriver.Chrome(executable_path='C:\Program Files (x86)\Google\chromedriver.exe', chrome_options=chrome_option)     #配置参数chrome_options=
     driver.get('https://www.zhihu.com/signup?next=%2F')
-    locad_butter = driver.find_element_by_css_selector(
-        '#root > div > main > div > div > div > div.SignContainer-inner > div.SignContainer-switch > span')
-    print(locad_butter.text)
+    locad_butter = driver.find_element_by_css_selector('#root > div > main > div > div > div > div.SignContainer-inner > div.SignContainer-switch > span')
     locad_butter.click()
+    time.sleep(2)               #等待2s
+    username = driver.find_element_by_css_selector('#root > div > main > div > div > div > div.SignContainer-inner > div.Login-content > form > div.SignFlow-account > div.SignFlowInput.SignFlow-accountInputContainer > div.SignFlow-accountInput.Input-wrapper > input')
+    print(username.tag_name)
+    return username
+
 
 def get_opener(heads):
     cj = http.cookiejar.CookieJar()
